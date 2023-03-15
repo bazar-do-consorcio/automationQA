@@ -1,0 +1,1644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230315 15:58:19.793" rpa="false" schemaversion="3">
+<suite id="s1" name="automationQA" source="C:\Users\george.paes_bazardoc\Documents\GitHub\automationQA">
+<suite id="s1-s1" name="Tests" source="C:\Users\george.paes_bazardoc\Documents\GitHub\automationQA\tests">
+<suite id="s1-s1-s1" name="End2End" source="C:\Users\george.paes_bazardoc\Documents\GitHub\automationQA\tests\end2end">
+<suite id="s1-s1-s1-s1" name="Ui" source="C:\Users\george.paes_bazardoc\Documents\GitHub\automationQA\tests\end2end\ui">
+<suite id="s1-s1-s1-s1-s1" name="Bpm" source="C:\Users\george.paes_bazardoc\Documents\GitHub\automationQA\tests\end2end\ui\bpm">
+<suite id="s1-s1-s1-s1-s1-s1" name="Cadastro" source="C:\Users\george.paes_bazardoc\Documents\GitHub\automationQA\tests\end2end\ui\bpm\cadastro.robot">
+<test id="s1-s1-s1-s1-s1-s1-t1" name="Cenário 1: Cadastrar usuario PF" line="8">
+<kw name="Abrir Navegador" library="generals" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=gc</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230315 15:58:20.687" level="INFO">Opening browser 'gc' to base url 'None'.</msg>
+<status status="PASS" starttime="20230315 15:58:20.686" endtime="20230315 15:58:23.474"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:20.686" endtime="20230315 15:58:23.474"/>
+</kw>
+<kw name="Acesso a url do BPM" library="bpm_keyword">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230315 15:58:23.477" level="INFO">Opening url 'https://staging.bazardoconsorcio.com.br/'</msg>
+<status status="PASS" starttime="20230315 15:58:23.477" endtime="20230315 15:58:29.356"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${btn_vender}</arg>
+<arg>${GENERAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230315 15:58:29.356" endtime="20230315 15:58:29.449"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:23.476" endtime="20230315 15:58:29.449"/>
+</kw>
+<kw name="Aceita termos de utilização de cookies" library="bpm_keyword">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:29.492" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:29.452" endtime="20230315 15:58:29.493"/>
+</kw>
+<msg timestamp="20230315 15:58:29.493" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:29.451" endtime="20230315 15:58:29.493"/>
+</kw>
+<while condition="${isVisible} == False">
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20230315 15:58:29.495" endtime="20230315 15:58:29.495"/>
+</kw>
+<status status="NOT RUN" starttime="20230315 15:58:29.493" endtime="20230315 15:58:29.495"/>
+</iter>
+<status status="NOT RUN" starttime="20230315 15:58:29.493" endtime="20230315 15:58:29.495"/>
+</while>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20230315 15:58:29.496" level="INFO">Double clicking element 'xpath://div[@class="cookieButton"]/a'.</msg>
+<status status="PASS" starttime="20230315 15:58:29.495" endtime="20230315 15:58:29.866"/>
+</kw>
+<while condition="${isVisible} == True">
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:29.918" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:29.868" endtime="20230315 15:58:29.919"/>
+</kw>
+<msg timestamp="20230315 15:58:29.919" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:29.867" endtime="20230315 15:58:29.919"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:29.866" endtime="20230315 15:58:29.919"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:29.947" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:29.920" endtime="20230315 15:58:29.948"/>
+</kw>
+<msg timestamp="20230315 15:58:29.948" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:29.920" endtime="20230315 15:58:29.948"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:29.919" endtime="20230315 15:58:29.948"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:29.980" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:29.949" endtime="20230315 15:58:29.980"/>
+</kw>
+<msg timestamp="20230315 15:58:29.980" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:29.949" endtime="20230315 15:58:29.980"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:29.948" endtime="20230315 15:58:29.980"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:30.014" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:29.982" endtime="20230315 15:58:30.014"/>
+</kw>
+<msg timestamp="20230315 15:58:30.015" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:29.981" endtime="20230315 15:58:30.015"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:29.980" endtime="20230315 15:58:30.015"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:30.047" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:30.016" endtime="20230315 15:58:30.048"/>
+</kw>
+<msg timestamp="20230315 15:58:30.048" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:30.016" endtime="20230315 15:58:30.048"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:30.015" endtime="20230315 15:58:30.048"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:30.080" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:30.050" endtime="20230315 15:58:30.080"/>
+</kw>
+<msg timestamp="20230315 15:58:30.080" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:30.049" endtime="20230315 15:58:30.080"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:30.048" endtime="20230315 15:58:30.080"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:30.112" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:30.081" endtime="20230315 15:58:30.112"/>
+</kw>
+<msg timestamp="20230315 15:58:30.112" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:30.081" endtime="20230315 15:58:30.112"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:30.081" endtime="20230315 15:58:30.112"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:30.147" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:30.114" endtime="20230315 15:58:30.148"/>
+</kw>
+<msg timestamp="20230315 15:58:30.148" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:30.114" endtime="20230315 15:58:30.148"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:30.113" endtime="20230315 15:58:30.148"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:30.180" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:30.149" endtime="20230315 15:58:30.180"/>
+</kw>
+<msg timestamp="20230315 15:58:30.180" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:30.149" endtime="20230315 15:58:30.180"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:30.148" endtime="20230315 15:58:30.180"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:30.214" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:30.181" endtime="20230315 15:58:30.214"/>
+</kw>
+<msg timestamp="20230315 15:58:30.214" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:30.181" endtime="20230315 15:58:30.214"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:30.180" endtime="20230315 15:58:30.214"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:30.243" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:30.216" endtime="20230315 15:58:30.244"/>
+</kw>
+<msg timestamp="20230315 15:58:30.244" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:30.215" endtime="20230315 15:58:30.244"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:30.215" endtime="20230315 15:58:30.244"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:30.283" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:30.245" endtime="20230315 15:58:30.283"/>
+</kw>
+<msg timestamp="20230315 15:58:30.284" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:30.245" endtime="20230315 15:58:30.284"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:30.244" endtime="20230315 15:58:30.284"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:30.318" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:30.285" endtime="20230315 15:58:30.319"/>
+</kw>
+<msg timestamp="20230315 15:58:30.319" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:30.285" endtime="20230315 15:58:30.319"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:30.284" endtime="20230315 15:58:30.319"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:30.353" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:30.321" endtime="20230315 15:58:30.354"/>
+</kw>
+<msg timestamp="20230315 15:58:30.354" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:30.320" endtime="20230315 15:58:30.354"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:30.319" endtime="20230315 15:58:30.354"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:30.387" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:30.356" endtime="20230315 15:58:30.387"/>
+</kw>
+<msg timestamp="20230315 15:58:30.387" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:30.355" endtime="20230315 15:58:30.387"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:30.354" endtime="20230315 15:58:30.387"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:30.419" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:30.389" endtime="20230315 15:58:30.419"/>
+</kw>
+<msg timestamp="20230315 15:58:30.419" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:30.388" endtime="20230315 15:58:30.419"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:30.387" endtime="20230315 15:58:30.419"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:30.446" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:30.420" endtime="20230315 15:58:30.446"/>
+</kw>
+<msg timestamp="20230315 15:58:30.447" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:30.420" endtime="20230315 15:58:30.447"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:30.420" endtime="20230315 15:58:30.447"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:30.473" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:30.448" endtime="20230315 15:58:30.473"/>
+</kw>
+<msg timestamp="20230315 15:58:30.474" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:30.447" endtime="20230315 15:58:30.474"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:30.447" endtime="20230315 15:58:30.474"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:30.504" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:30.475" endtime="20230315 15:58:30.505"/>
+</kw>
+<msg timestamp="20230315 15:58:30.505" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:30.475" endtime="20230315 15:58:30.505"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:30.474" endtime="20230315 15:58:30.505"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:30.534" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:30.506" endtime="20230315 15:58:30.534"/>
+</kw>
+<msg timestamp="20230315 15:58:30.534" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:30.506" endtime="20230315 15:58:30.534"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:30.505" endtime="20230315 15:58:30.534"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:30.567" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:30.536" endtime="20230315 15:58:30.568"/>
+</kw>
+<msg timestamp="20230315 15:58:30.568" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:30.535" endtime="20230315 15:58:30.568"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:30.535" endtime="20230315 15:58:30.568"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:30.599" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:30.569" endtime="20230315 15:58:30.599"/>
+</kw>
+<msg timestamp="20230315 15:58:30.599" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:30.569" endtime="20230315 15:58:30.599"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:30.568" endtime="20230315 15:58:30.599"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:30.631" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:58:30.602" endtime="20230315 15:58:30.632"/>
+</kw>
+<msg timestamp="20230315 15:58:30.632" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:58:30.601" endtime="20230315 15:58:30.632"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:30.599" endtime="20230315 15:58:30.632"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:58:30.821" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-120.png"&gt;&lt;img src="selenium-screenshot-120.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230315 15:58:30.821" level="FAIL">The element 'xpath://div[@class="cookieButton"]/a' should be visible, but it is not.</msg>
+<status status="FAIL" starttime="20230315 15:58:30.633" endtime="20230315 15:58:30.846"/>
+</kw>
+<msg timestamp="20230315 15:58:30.847" level="INFO">${isVisible} = False</msg>
+<status status="PASS" starttime="20230315 15:58:30.633" endtime="20230315 15:58:30.847"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:30.632" endtime="20230315 15:58:30.847"/>
+</iter>
+<status status="PASS" starttime="20230315 15:58:29.866" endtime="20230315 15:58:30.847"/>
+</while>
+<status status="PASS" starttime="20230315 15:58:29.450" endtime="20230315 15:58:30.847"/>
+</kw>
+<kw name="Clicar no botão Vender" library="bpm_keyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_vender}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 15:58:30.850" level="INFO">Clicking element 'xpath://a[text()="Vender agora"]'.</msg>
+<status status="PASS" starttime="20230315 15:58:30.849" endtime="20230315 15:58:32.914"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${label_administradora}</arg>
+<arg>${GENERAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230315 15:58:32.915" endtime="20230315 15:58:32.991"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:30.848" endtime="20230315 15:58:32.992"/>
+</kw>
+<kw name="Selecionar a administradora Itaú" library="bpm_keyword">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${option_itau}</arg>
+<arg>${GENERAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230315 15:58:32.993" endtime="20230315 15:58:33.047"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${option_itau}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 15:58:33.049" level="INFO">Clicking element 'xpath://option[text()="Itaú"]'.</msg>
+<status status="PASS" starttime="20230315 15:58:33.047" endtime="20230315 15:58:33.116"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:32.992" endtime="20230315 15:58:33.116"/>
+</kw>
+<kw name="Avanço para a próxima etapa" library="bpm_keyword">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${btn_avancar}</arg>
+<arg>${GENERAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230315 15:58:33.118" endtime="20230315 15:58:33.181"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_avancar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 15:58:33.183" level="INFO">Clicking element 'xpath://input[@value="Avançar"]'.</msg>
+<status status="PASS" starttime="20230315 15:58:33.182" endtime="20230315 15:58:36.637"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:33.117" endtime="20230315 15:58:36.637"/>
+</kw>
+<kw name="Clicar na opção Pessoa Física" library="bpm_keyword">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${btn_pf}</arg>
+<arg>${GENERAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230315 15:58:36.639" endtime="20230315 15:58:36.706"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_pf}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 15:58:36.708" level="INFO">Clicking element 'xpath://label[text()="Pessoa física"]'.</msg>
+<status status="PASS" starttime="20230315 15:58:36.706" endtime="20230315 15:58:36.831"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:36.638" endtime="20230315 15:58:36.831"/>
+</kw>
+<kw name="Informar os dados do usuário PF" library="bpm_keyword" sourcename="Informar os dados do usuário ${TYPE_CLIENT}">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${fld_name}</arg>
+<arg>${GENERAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230315 15:58:36.833" endtime="20230315 15:58:36.915"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fld_name}</arg>
+<arg>teste</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230315 15:58:36.917" level="INFO">Typing text 'teste' into text field 'id:customer_name'.</msg>
+<status status="PASS" starttime="20230315 15:58:36.916" endtime="20230315 15:58:37.047"/>
+</kw>
+<if>
+<branch type="IF" condition="'${TYPE_CLIENT}' == 'PF'">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fld_cpf}</arg>
+<arg>12274940096</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230315 15:58:37.049" level="INFO">Typing text '12274940096' into text field 'id:customer_cpf'.</msg>
+<status status="PASS" starttime="20230315 15:58:37.048" endtime="20230315 15:58:37.186"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fld_email}</arg>
+<arg>teste${randomNumber}@teste.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230315 15:58:37.188" level="INFO">Typing text 'testeGet Current Date result_format=datetime@teste.com' into text field 'id:customer_email'.</msg>
+<status status="PASS" starttime="20230315 15:58:37.187" endtime="20230315 15:58:37.416"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fld_numberCel}</arg>
+<arg>11954507555</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230315 15:58:37.417" level="INFO">Typing text '11954507555' into text field 'id:customer_phones_attributes_0_identifier'.</msg>
+<status status="PASS" starttime="20230315 15:58:37.416" endtime="20230315 15:58:37.578"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:37.047" endtime="20230315 15:58:37.578"/>
+</branch>
+<branch type="ELSE">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fld_cnpj}</arg>
+<arg>11758091000145</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230315 15:58:37.578" endtime="20230315 15:58:37.579"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fld_email}</arg>
+<arg>teste${randomNumber}@teste.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230315 15:58:37.579" endtime="20230315 15:58:37.579"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fld_numberCel}</arg>
+<arg>11954507555</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230315 15:58:37.579" endtime="20230315 15:58:37.579"/>
+</kw>
+<status status="NOT RUN" starttime="20230315 15:58:37.578" endtime="20230315 15:58:37.579"/>
+</branch>
+<status status="PASS" starttime="20230315 15:58:37.047" endtime="20230315 15:58:37.579"/>
+</if>
+<status status="PASS" starttime="20230315 15:58:36.832" endtime="20230315 15:58:37.580"/>
+</kw>
+<kw name="Avanço para a próxima etapa" library="bpm_keyword">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${btn_avancar}</arg>
+<arg>${GENERAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230315 15:58:37.581" endtime="20230315 15:58:37.634"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_avancar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 15:58:37.635" level="INFO">Clicking element 'xpath://input[@value="Avançar"]'.</msg>
+<status status="PASS" starttime="20230315 15:58:37.634" endtime="20230315 15:58:37.772"/>
+</kw>
+<status status="PASS" starttime="20230315 15:58:37.581" endtime="20230315 15:58:37.772"/>
+</kw>
+<kw name="Informo os dados da minha cota contemplada" library="bpm_keyword">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${fld_group}</arg>
+<arg>${GENERAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:07.966" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-121.png"&gt;&lt;img src="selenium-screenshot-121.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230315 15:59:07.966" level="FAIL">Element 'id:optin_group' not visible after 30 seconds.</msg>
+<status status="FAIL" starttime="20230315 15:58:37.774" endtime="20230315 15:59:07.978"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fld_group}</arg>
+<arg>8596</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230315 15:59:07.978" endtime="20230315 15:59:07.978"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fld_numberQuota}</arg>
+<arg>2351</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230315 15:59:07.979" endtime="20230315 15:59:07.979"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${label_quotaContemplada}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230315 15:59:07.979" endtime="20230315 15:59:07.979"/>
+</kw>
+<status status="FAIL" starttime="20230315 15:58:37.773" endtime="20230315 15:59:07.979"/>
+</kw>
+<kw name="Avanço para a próxima etapa" library="bpm_keyword">
+<status status="NOT RUN" starttime="20230315 15:59:07.980" endtime="20230315 15:59:07.980"/>
+</kw>
+<kw name="Informo minha senha de cadastro" library="bpm_keyword">
+<status status="NOT RUN" starttime="20230315 15:59:07.981" endtime="20230315 15:59:07.981"/>
+</kw>
+<kw name="Confirmo o cadastro" library="bpm_keyword">
+<status status="NOT RUN" starttime="20230315 15:59:07.981" endtime="20230315 15:59:07.981"/>
+</kw>
+<kw name="Conta criada com sucesso" library="bpm_keyword">
+<status status="NOT RUN" starttime="20230315 15:59:07.981" endtime="20230315 15:59:07.981"/>
+</kw>
+<kw name="Fechar Navegador" library="generals" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230315 15:59:07.982" endtime="20230315 15:59:11.886"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:07.982" endtime="20230315 15:59:11.887"/>
+</kw>
+<tag>bpm</tag>
+<tag>cadastro</tag>
+<tag>front-end</tag>
+<tag>web</tag>
+<status status="FAIL" starttime="20230315 15:58:20.685" endtime="20230315 15:59:11.887">Element 'id:optin_group' not visible after 30 seconds.</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-t2" name="Cenário 2: Cadastrar usuario PJ" line="24">
+<kw name="Abrir Navegador" library="generals" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=gc</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230315 15:59:11.893" level="INFO">Opening browser 'gc' to base url 'None'.</msg>
+<status status="PASS" starttime="20230315 15:59:11.893" endtime="20230315 15:59:13.568"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:11.892" endtime="20230315 15:59:13.568"/>
+</kw>
+<kw name="Acesso a url do BPM" library="bpm_keyword">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230315 15:59:13.569" level="INFO">Opening url 'https://staging.bazardoconsorcio.com.br/'</msg>
+<status status="PASS" starttime="20230315 15:59:13.569" endtime="20230315 15:59:17.086"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${btn_vender}</arg>
+<arg>${GENERAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230315 15:59:17.086" endtime="20230315 15:59:17.129"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:13.569" endtime="20230315 15:59:17.129"/>
+</kw>
+<kw name="Aceita termos de utilização de cookies" library="bpm_keyword">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:17.160" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.130" endtime="20230315 15:59:17.162"/>
+</kw>
+<msg timestamp="20230315 15:59:17.162" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.130" endtime="20230315 15:59:17.162"/>
+</kw>
+<while condition="${isVisible} == False">
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20230315 15:59:17.163" endtime="20230315 15:59:17.163"/>
+</kw>
+<status status="NOT RUN" starttime="20230315 15:59:17.162" endtime="20230315 15:59:17.163"/>
+</iter>
+<status status="NOT RUN" starttime="20230315 15:59:17.162" endtime="20230315 15:59:17.163"/>
+</while>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20230315 15:59:17.164" level="INFO">Double clicking element 'xpath://div[@class="cookieButton"]/a'.</msg>
+<status status="PASS" starttime="20230315 15:59:17.163" endtime="20230315 15:59:17.538"/>
+</kw>
+<while condition="${isVisible} == True">
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:17.584" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.540" endtime="20230315 15:59:17.584"/>
+</kw>
+<msg timestamp="20230315 15:59:17.584" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.539" endtime="20230315 15:59:17.584"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:17.538" endtime="20230315 15:59:17.584"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:17.603" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.585" endtime="20230315 15:59:17.603"/>
+</kw>
+<msg timestamp="20230315 15:59:17.603" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.585" endtime="20230315 15:59:17.603"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:17.584" endtime="20230315 15:59:17.603"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:17.624" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.603" endtime="20230315 15:59:17.624"/>
+</kw>
+<msg timestamp="20230315 15:59:17.624" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.603" endtime="20230315 15:59:17.624"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:17.603" endtime="20230315 15:59:17.624"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:17.645" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.625" endtime="20230315 15:59:17.645"/>
+</kw>
+<msg timestamp="20230315 15:59:17.645" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.625" endtime="20230315 15:59:17.645"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:17.624" endtime="20230315 15:59:17.645"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:17.664" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.646" endtime="20230315 15:59:17.664"/>
+</kw>
+<msg timestamp="20230315 15:59:17.664" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.645" endtime="20230315 15:59:17.664"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:17.645" endtime="20230315 15:59:17.664"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:17.684" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.665" endtime="20230315 15:59:17.684"/>
+</kw>
+<msg timestamp="20230315 15:59:17.684" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.664" endtime="20230315 15:59:17.684"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:17.664" endtime="20230315 15:59:17.684"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:17.703" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.685" endtime="20230315 15:59:17.703"/>
+</kw>
+<msg timestamp="20230315 15:59:17.703" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.684" endtime="20230315 15:59:17.703"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:17.684" endtime="20230315 15:59:17.703"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:17.722" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.703" endtime="20230315 15:59:17.722"/>
+</kw>
+<msg timestamp="20230315 15:59:17.722" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.703" endtime="20230315 15:59:17.722"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:17.703" endtime="20230315 15:59:17.722"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:17.743" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.723" endtime="20230315 15:59:17.743"/>
+</kw>
+<msg timestamp="20230315 15:59:17.743" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.723" endtime="20230315 15:59:17.743"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:17.722" endtime="20230315 15:59:17.743"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:17.759" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.743" endtime="20230315 15:59:17.760"/>
+</kw>
+<msg timestamp="20230315 15:59:17.760" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.743" endtime="20230315 15:59:17.760"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:17.743" endtime="20230315 15:59:17.760"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:17.778" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.761" endtime="20230315 15:59:17.778"/>
+</kw>
+<msg timestamp="20230315 15:59:17.778" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.761" endtime="20230315 15:59:17.778"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:17.760" endtime="20230315 15:59:17.778"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:17.796" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.778" endtime="20230315 15:59:17.796"/>
+</kw>
+<msg timestamp="20230315 15:59:17.796" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.778" endtime="20230315 15:59:17.796"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:17.778" endtime="20230315 15:59:17.796"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:17.812" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.797" endtime="20230315 15:59:17.812"/>
+</kw>
+<msg timestamp="20230315 15:59:17.812" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.796" endtime="20230315 15:59:17.812"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:17.796" endtime="20230315 15:59:17.812"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:17.831" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.813" endtime="20230315 15:59:17.831"/>
+</kw>
+<msg timestamp="20230315 15:59:17.831" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.813" endtime="20230315 15:59:17.831"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:17.812" endtime="20230315 15:59:17.831"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:17.851" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.832" endtime="20230315 15:59:17.851"/>
+</kw>
+<msg timestamp="20230315 15:59:17.851" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.831" endtime="20230315 15:59:17.851"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:17.831" endtime="20230315 15:59:17.851"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:17.871" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.852" endtime="20230315 15:59:17.871"/>
+</kw>
+<msg timestamp="20230315 15:59:17.871" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.852" endtime="20230315 15:59:17.871"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:17.851" endtime="20230315 15:59:17.871"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:17.890" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.871" endtime="20230315 15:59:17.891"/>
+</kw>
+<msg timestamp="20230315 15:59:17.891" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.871" endtime="20230315 15:59:17.891"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:17.871" endtime="20230315 15:59:17.891"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:17.912" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.892" endtime="20230315 15:59:17.912"/>
+</kw>
+<msg timestamp="20230315 15:59:17.912" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.891" endtime="20230315 15:59:17.912"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:17.891" endtime="20230315 15:59:17.912"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:17.931" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.913" endtime="20230315 15:59:17.931"/>
+</kw>
+<msg timestamp="20230315 15:59:17.931" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.913" endtime="20230315 15:59:17.931"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:17.912" endtime="20230315 15:59:17.931"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:17.950" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.932" endtime="20230315 15:59:17.950"/>
+</kw>
+<msg timestamp="20230315 15:59:17.950" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.931" endtime="20230315 15:59:17.950"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:17.931" endtime="20230315 15:59:17.950"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:17.966" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.951" endtime="20230315 15:59:17.966"/>
+</kw>
+<msg timestamp="20230315 15:59:17.966" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.950" endtime="20230315 15:59:17.966"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:17.950" endtime="20230315 15:59:17.966"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:17.983" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.966" endtime="20230315 15:59:17.983"/>
+</kw>
+<msg timestamp="20230315 15:59:17.983" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.966" endtime="20230315 15:59:17.983"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:17.966" endtime="20230315 15:59:17.983"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:18.000" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:17.983" endtime="20230315 15:59:18.000"/>
+</kw>
+<msg timestamp="20230315 15:59:18.000" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:17.983" endtime="20230315 15:59:18.000"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:17.983" endtime="20230315 15:59:18.000"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:18.017" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:18.000" endtime="20230315 15:59:18.017"/>
+</kw>
+<msg timestamp="20230315 15:59:18.017" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:18.000" endtime="20230315 15:59:18.017"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:18.000" endtime="20230315 15:59:18.017"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:18.034" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:18.017" endtime="20230315 15:59:18.034"/>
+</kw>
+<msg timestamp="20230315 15:59:18.034" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:18.017" endtime="20230315 15:59:18.034"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:18.017" endtime="20230315 15:59:18.034"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:18.051" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:18.034" endtime="20230315 15:59:18.051"/>
+</kw>
+<msg timestamp="20230315 15:59:18.051" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:18.034" endtime="20230315 15:59:18.051"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:18.034" endtime="20230315 15:59:18.051"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:18.067" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:18.051" endtime="20230315 15:59:18.067"/>
+</kw>
+<msg timestamp="20230315 15:59:18.067" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:18.051" endtime="20230315 15:59:18.067"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:18.051" endtime="20230315 15:59:18.067"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:18.084" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:18.068" endtime="20230315 15:59:18.084"/>
+</kw>
+<msg timestamp="20230315 15:59:18.084" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:18.068" endtime="20230315 15:59:18.084"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:18.067" endtime="20230315 15:59:18.084"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:18.099" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:18.084" endtime="20230315 15:59:18.099"/>
+</kw>
+<msg timestamp="20230315 15:59:18.099" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:18.084" endtime="20230315 15:59:18.100"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:18.084" endtime="20230315 15:59:18.100"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:18.116" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:18.101" endtime="20230315 15:59:18.116"/>
+</kw>
+<msg timestamp="20230315 15:59:18.116" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:18.100" endtime="20230315 15:59:18.116"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:18.100" endtime="20230315 15:59:18.116"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:18.134" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:18.117" endtime="20230315 15:59:18.134"/>
+</kw>
+<msg timestamp="20230315 15:59:18.134" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:18.117" endtime="20230315 15:59:18.134"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:18.116" endtime="20230315 15:59:18.134"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:18.154" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:18.135" endtime="20230315 15:59:18.154"/>
+</kw>
+<msg timestamp="20230315 15:59:18.155" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:18.135" endtime="20230315 15:59:18.155"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:18.134" endtime="20230315 15:59:18.155"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:18.174" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:18.156" endtime="20230315 15:59:18.174"/>
+</kw>
+<msg timestamp="20230315 15:59:18.174" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:18.155" endtime="20230315 15:59:18.174"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:18.155" endtime="20230315 15:59:18.174"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:18.194" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:18.175" endtime="20230315 15:59:18.194"/>
+</kw>
+<msg timestamp="20230315 15:59:18.194" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:18.174" endtime="20230315 15:59:18.194"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:18.174" endtime="20230315 15:59:18.194"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:18.215" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:18.195" endtime="20230315 15:59:18.215"/>
+</kw>
+<msg timestamp="20230315 15:59:18.216" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:18.195" endtime="20230315 15:59:18.216"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:18.194" endtime="20230315 15:59:18.216"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:18.239" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:18.217" endtime="20230315 15:59:18.240"/>
+</kw>
+<msg timestamp="20230315 15:59:18.240" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:18.217" endtime="20230315 15:59:18.240"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:18.216" endtime="20230315 15:59:18.240"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:18.266" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:18.241" endtime="20230315 15:59:18.266"/>
+</kw>
+<msg timestamp="20230315 15:59:18.267" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:18.240" endtime="20230315 15:59:18.267"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:18.240" endtime="20230315 15:59:18.267"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:18.291" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:18.268" endtime="20230315 15:59:18.291"/>
+</kw>
+<msg timestamp="20230315 15:59:18.291" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:18.268" endtime="20230315 15:59:18.291"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:18.267" endtime="20230315 15:59:18.291"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:18.315" level="INFO">Element 'xpath://div[@class="cookieButton"]/a' is displayed.</msg>
+<status status="PASS" starttime="20230315 15:59:18.293" endtime="20230315 15:59:18.315"/>
+</kw>
+<msg timestamp="20230315 15:59:18.316" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20230315 15:59:18.292" endtime="20230315 15:59:18.316"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:18.292" endtime="20230315 15:59:18.316"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${btn_cookie}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_cookie}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:18.503" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-122.png"&gt;&lt;img src="selenium-screenshot-122.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230315 15:59:18.503" level="FAIL">The element 'xpath://div[@class="cookieButton"]/a' should be visible, but it is not.</msg>
+<status status="FAIL" starttime="20230315 15:59:18.317" endtime="20230315 15:59:18.504"/>
+</kw>
+<msg timestamp="20230315 15:59:18.506" level="INFO">${isVisible} = False</msg>
+<status status="PASS" starttime="20230315 15:59:18.316" endtime="20230315 15:59:18.506"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:18.316" endtime="20230315 15:59:18.506"/>
+</iter>
+<status status="PASS" starttime="20230315 15:59:17.538" endtime="20230315 15:59:18.506"/>
+</while>
+<status status="PASS" starttime="20230315 15:59:17.129" endtime="20230315 15:59:18.507"/>
+</kw>
+<kw name="Clicar no botão Vender" library="bpm_keyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_vender}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 15:59:18.510" level="INFO">Clicking element 'xpath://a[text()="Vender agora"]'.</msg>
+<status status="PASS" starttime="20230315 15:59:18.509" endtime="20230315 15:59:20.152"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${label_administradora}</arg>
+<arg>${GENERAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230315 15:59:20.152" endtime="20230315 15:59:20.248"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:18.508" endtime="20230315 15:59:20.249"/>
+</kw>
+<kw name="Selecionar a administradora Itaú" library="bpm_keyword">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${option_itau}</arg>
+<arg>${GENERAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230315 15:59:20.250" endtime="20230315 15:59:20.298"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${option_itau}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 15:59:20.300" level="INFO">Clicking element 'xpath://option[text()="Itaú"]'.</msg>
+<status status="PASS" starttime="20230315 15:59:20.299" endtime="20230315 15:59:20.348"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:20.249" endtime="20230315 15:59:20.349"/>
+</kw>
+<kw name="Avanço para a próxima etapa" library="bpm_keyword">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${btn_avancar}</arg>
+<arg>${GENERAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230315 15:59:20.350" endtime="20230315 15:59:20.400"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_avancar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 15:59:20.401" level="INFO">Clicking element 'xpath://input[@value="Avançar"]'.</msg>
+<status status="PASS" starttime="20230315 15:59:20.400" endtime="20230315 15:59:23.424"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:20.349" endtime="20230315 15:59:23.425"/>
+</kw>
+<kw name="Clicar na opção Pessoa Jurídica" library="bpm_keyword">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${btn_pj}</arg>
+<arg>${GENERAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230315 15:59:23.427" endtime="20230315 15:59:23.514"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_pj}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 15:59:23.515" level="INFO">Clicking element 'xpath://label[text()="Pessoa jurídica"]'.</msg>
+<status status="PASS" starttime="20230315 15:59:23.514" endtime="20230315 15:59:23.615"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:23.426" endtime="20230315 15:59:23.615"/>
+</kw>
+<kw name="Informar os dados do usuário PJ" library="bpm_keyword" sourcename="Informar os dados do usuário ${TYPE_CLIENT}">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${fld_name}</arg>
+<arg>${GENERAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230315 15:59:23.616" endtime="20230315 15:59:23.697"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fld_name}</arg>
+<arg>teste</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230315 15:59:23.699" level="INFO">Typing text 'teste' into text field 'id:customer_name'.</msg>
+<status status="PASS" starttime="20230315 15:59:23.698" endtime="20230315 15:59:23.831"/>
+</kw>
+<if>
+<branch type="IF" condition="'${TYPE_CLIENT}' == 'PF'">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fld_cpf}</arg>
+<arg>12274940096</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230315 15:59:23.832" endtime="20230315 15:59:23.832"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fld_email}</arg>
+<arg>teste${randomNumber}@teste.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230315 15:59:23.833" endtime="20230315 15:59:23.833"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fld_numberCel}</arg>
+<arg>11954507555</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230315 15:59:23.833" endtime="20230315 15:59:23.833"/>
+</kw>
+<status status="NOT RUN" starttime="20230315 15:59:23.832" endtime="20230315 15:59:23.833"/>
+</branch>
+<branch type="ELSE">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fld_cnpj}</arg>
+<arg>11758091000145</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230315 15:59:23.835" level="INFO">Typing text '11758091000145' into text field 'id:customer_cnpj'.</msg>
+<status status="PASS" starttime="20230315 15:59:23.833" endtime="20230315 15:59:24.002"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fld_email}</arg>
+<arg>teste${randomNumber}@teste.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230315 15:59:24.005" level="INFO">Typing text 'testeGet Current Date result_format=datetime@teste.com' into text field 'id:customer_email'.</msg>
+<status status="PASS" starttime="20230315 15:59:24.003" endtime="20230315 15:59:24.226"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fld_numberCel}</arg>
+<arg>11954507555</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230315 15:59:24.227" level="INFO">Typing text '11954507555' into text field 'id:customer_phones_attributes_0_identifier'.</msg>
+<status status="PASS" starttime="20230315 15:59:24.226" endtime="20230315 15:59:24.354"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:23.833" endtime="20230315 15:59:24.354"/>
+</branch>
+<status status="PASS" starttime="20230315 15:59:23.832" endtime="20230315 15:59:24.354"/>
+</if>
+<status status="PASS" starttime="20230315 15:59:23.616" endtime="20230315 15:59:24.355"/>
+</kw>
+<kw name="Avanço para a próxima etapa" library="bpm_keyword">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${btn_avancar}</arg>
+<arg>${GENERAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230315 15:59:24.356" endtime="20230315 15:59:24.402"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_avancar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 15:59:24.403" level="INFO">Clicking element 'xpath://input[@value="Avançar"]'.</msg>
+<status status="PASS" starttime="20230315 15:59:24.402" endtime="20230315 15:59:24.509"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:24.355" endtime="20230315 15:59:24.509"/>
+</kw>
+<kw name="Informo os dados da minha cota contemplada" library="bpm_keyword">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${fld_group}</arg>
+<arg>${GENERAL_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230315 15:59:54.763" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-123.png"&gt;&lt;img src="selenium-screenshot-123.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230315 15:59:54.764" level="FAIL">Element 'id:optin_group' not visible after 30 seconds.</msg>
+<status status="FAIL" starttime="20230315 15:59:24.511" endtime="20230315 15:59:54.765"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fld_group}</arg>
+<arg>8596</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230315 15:59:54.766" endtime="20230315 15:59:54.766"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${fld_numberQuota}</arg>
+<arg>2351</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230315 15:59:54.766" endtime="20230315 15:59:54.767"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${label_quotaContemplada}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230315 15:59:54.767" endtime="20230315 15:59:54.767"/>
+</kw>
+<status status="FAIL" starttime="20230315 15:59:24.510" endtime="20230315 15:59:54.767"/>
+</kw>
+<kw name="Avanço para a próxima etapa" library="bpm_keyword">
+<status status="NOT RUN" starttime="20230315 15:59:54.769" endtime="20230315 15:59:54.769"/>
+</kw>
+<kw name="Informo minha senha de cadastro" library="bpm_keyword">
+<status status="NOT RUN" starttime="20230315 15:59:54.770" endtime="20230315 15:59:54.770"/>
+</kw>
+<kw name="Confirmo o cadastro" library="bpm_keyword">
+<status status="NOT RUN" starttime="20230315 15:59:54.770" endtime="20230315 15:59:54.770"/>
+</kw>
+<kw name="Conta criada com sucesso" library="bpm_keyword">
+<status status="NOT RUN" starttime="20230315 15:59:54.771" endtime="20230315 15:59:54.771"/>
+</kw>
+<kw name="Fechar Navegador" library="generals" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230315 15:59:54.772" endtime="20230315 15:59:58.675"/>
+</kw>
+<status status="PASS" starttime="20230315 15:59:54.771" endtime="20230315 15:59:58.676"/>
+</kw>
+<tag>bpm</tag>
+<tag>cadastro</tag>
+<tag>front-end</tag>
+<tag>web</tag>
+<status status="FAIL" starttime="20230315 15:59:11.890" endtime="20230315 15:59:58.676">Element 'id:optin_group' not visible after 30 seconds.</status>
+</test>
+<status status="FAIL" starttime="20230315 15:58:19.912" endtime="20230315 15:59:58.680"/>
+</suite>
+<status status="FAIL" starttime="20230315 15:58:19.901" endtime="20230315 15:59:58.686"/>
+</suite>
+<status status="FAIL" starttime="20230315 15:58:19.895" endtime="20230315 15:59:58.689"/>
+</suite>
+<status status="FAIL" starttime="20230315 15:58:19.888" endtime="20230315 15:59:58.693"/>
+</suite>
+<status status="FAIL" starttime="20230315 15:58:19.880" endtime="20230315 15:59:58.697"/>
+</suite>
+<status status="FAIL" starttime="20230315 15:58:19.810" endtime="20230315 15:59:58.700"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="2" skip="0">bpm</stat>
+<stat pass="0" fail="2" skip="0">cadastro</stat>
+<stat pass="0" fail="2" skip="0">front-end</stat>
+<stat pass="0" fail="2" skip="0">web</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="automationQA">automationQA</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1" name="Tests">automationQA.Tests</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1-s1" name="End2End">automationQA.Tests.End2End</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1-s1-s1" name="Ui">automationQA.Tests.End2End.Ui</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1-s1-s1-s1" name="Bpm">automationQA.Tests.End2End.Ui.Bpm</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1-s1-s1-s1-s1" name="Cadastro">automationQA.Tests.End2End.Ui.Bpm.Cadastro</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
