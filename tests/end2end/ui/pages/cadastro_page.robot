@@ -1,5 +1,6 @@
 *** Variables ***
 
+
 #Label de administradoras
 ${label_administradora}    id:manager_id
 ${option_itau}     xpath://option[text()="Itaú"]

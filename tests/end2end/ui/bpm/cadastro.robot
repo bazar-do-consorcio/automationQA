@@ -6,7 +6,7 @@ Test Teardown    Fechar Navegador
 *** Test Cases ***
 
 Cenário 1: Cadastrar usuario PF
-    [Tags]    cadastro
+    [Tags]    cadastro    regressivo
     Acesso a url do BPM
     Aceita termos de utilização de cookies
     Clicar no botão Vender
@@ -22,7 +22,7 @@ Cenário 1: Cadastrar usuario PF
     Conta criada com sucesso
 
 Cenário 2: Cadastrar usuario PJ
-    [Tags]    cadastro
+    [Tags]    cadastro    regressivo
     Acesso a url do BPM
     Aceita termos de utilização de cookies
     Clicar no botão Vender

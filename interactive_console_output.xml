@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.10.4 on win32)" generated="20230310 17:40:48.570" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230317 17:06:41.267" rpa="false" schemaversion="3">
 <suite id="s1" name="Robot Interactive Console" source="c:\Users\george.paes_bazardoc\.vscode\extensions\robocorp.robotframework-lsp-1.9.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
 <test id="s1-t1" name="Default Task/Test" line="5">
 <kw name="Interpreter Main Loop" library="MainLoop">
-<status status="PASS" starttime="20230310 17:40:48.596" endtime="20230310 17:42:56.814"/>
+<kw name="Acesso a url do google">
+<msg timestamp="20230317 17:06:42.497" level="FAIL">No keyword with name 'Acesso a url do google' found.</msg>
+<status status="FAIL" starttime="20230317 17:06:42.497" endtime="20230317 17:06:42.497"/>
 </kw>
-<status status="PASS" starttime="20230310 17:40:48.595" endtime="20230310 17:42:56.814"/>
+<kw name="Verifique o icone">
+<status status="NOT RUN" starttime="20230317 17:06:42.498" endtime="20230317 17:06:42.498"/>
+</kw>
+<status status="PASS" starttime="20230317 17:06:41.329" endtime="20230317 17:07:02.349"/>
+</kw>
+<status status="PASS" starttime="20230317 17:06:41.329" endtime="20230317 17:07:02.349"/>
 </test>
-<status status="PASS" starttime="20230310 17:40:48.575" endtime="20230310 17:42:56.814"/>
+<status status="PASS" starttime="20230317 17:06:41.281" endtime="20230317 17:07:02.350"/>
 </suite>
 <statistics>
 <total>

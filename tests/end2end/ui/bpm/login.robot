@@ -6,29 +6,31 @@ Test Teardown    Fechar Navegador
 *** Test Cases ***
 
 Cenário 1: Itau - Efetuar login
-    [Tags]    login    regressivo    smoketest
-    Acessar a home de bpm
-    Clicar no botão login
-    Efetuar o login
+    [Tags]    login  
+    Acesso a url do BPM
+    Clicar no botão Entrar
+    Aceita termos de utilização de cookies
+    Clicar na opção Itaú
+    Efetuar o login do usuário
+    Login é efetuado com sucesso
+
     
 
-Cenário 2: Itau - Efetuar login com dados invalidos
-    [Tags]    @Test002
-    Acesso a url do google
-    Verifique o icone
+Cenário 2: Outras Adms - Efetuar login
+    [Tags]    login    regressivo   
+    Acesso a url do BPM
+    Clicar no botão Entrar
+    Clicar na opção OutrasAdms
+    Efetuar o login do usuário
+    Login é efetuado com sucesso
 
-Cenário 3: Outras Adms - Efetuar login
-    [Tags]    @Test003
-    Acesso a url do google
-    Verifique o icone
-
-Cenário 4: Outras Adms - Efetuar login com dados invalidos
-    [Tags]    @Test004
-    Acesso a url do google
-    Verifique o icone
-
-Cenário 5: Logout
-    [Tags]    @Test004
-    Acesso a url do google
-    Verifique o icone
+Cenário 3: Efetuar Logout
+    [Tags]    login    regressivo     
+    Acesso a url do BPM
+    Clicar no botão Entrar
+    Clicar na opção OutrasAdms
+    Efetuar o login do usuário
+    Login é efetuado com sucesso
+    Efetuar o logout do usuário
+    Logout é efetuado com sucesso
 

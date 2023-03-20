@@ -1,8 +1,32 @@
 *** Settings ***
 
+Library    DateTime
+Library    FakerLibrary       locale=pt_BR
+
 
 *** Variables ***
-#Login PF
-${LOGIN_PF}    bazardoconsorcio.cpf.qa@gmail.com
-${LOGIN_PJ}    bazardoconsorcio.cnpj.qa@gmail.com
-${GENERAL_PWD}    Teste@123
+#Login
+${LOGIN}   george.paes@bazardoconsorcio.com.br
+${PASSWORD}    Teste@123
+
+*** Keywords ***
+
+Gerar nome aleatório
+    ${NAME}  FakerLibrary.Name
+    [Return]    ${NAME}
+
+Gerar cpf aleatório
+    ${CPF}  FakerLibrary.cpf
+    [Return]    ${CPF}
+
+Gerar cnpj aleatório
+    ${CNPJ}  FakerLibrary.cnpj
+    [Return]    ${CNPJ}
+
+Gerar email aleatório
+    ${EMAIL}  FakerLibrary.Email
+    [Return]    ${EMAIL}
+
+
+
+
