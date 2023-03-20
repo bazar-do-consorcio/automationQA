@@ -6,7 +6,7 @@ Resource    ../Base.robot
 
 
 *** Keywords ***   
-Clicar na opção ${BANK}
+Clicar na administradora ${BANK}
     Wait Until Element Is Enabled    ${opc_outrasAdms}    ${GENERAL_TIMEOUT}
     
     IF    '${BANK}' == 'Itaú'

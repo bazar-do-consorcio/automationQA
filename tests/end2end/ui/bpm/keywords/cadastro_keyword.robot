@@ -32,13 +32,13 @@ Avanço para a próxima etapa
 
     Click Element    ${btn_avancar}
 
-Clicar na opção Pessoa Física
+Clicar na opção de cliente ${TYPE_CLIENT}
     Wait Until Element Is Enabled    ${btn_pf}     ${GENERAL_TIMEOUT}
-    Click Element    ${btn_pf}
-
-Clicar na opção Pessoa Jurídica
-    Wait Until Element Is Enabled    ${btn_pj}      ${GENERAL_TIMEOUT}
-    Click Element    ${btn_pj}
+    IF    '${TYPE_CLIENT}' == 'PF'
+        Click Element    ${btn_pf}
+    ELSE
+        Click Element    ${btn_pj}
+    END
 
 Informar os dados do usuário ${TYPE_CLIENT}
     Wait Until Element Is Enabled    ${fld_name}    ${GENERAL_TIMEOUT}
@@ -50,16 +50,14 @@ Informar os dados do usuário ${TYPE_CLIENT}
 
     Input Text    ${fld_name}   ${NAME}
   
-
     IF   '${TYPE_CLIENT}' == 'PF' 
     Input Text    ${fld_cpf}    ${CPF}
-    Input Text    ${fld_email}     ${EMAIL}
-    Input Text    ${fld_numberCel}    11954507555
     ELSE
     Input Text    ${fld_cnpj}    ${CNPJ}
+    END
+
     Input Text    ${fld_email}     ${EMAIL}
     Input Text    ${fld_numberCel}    11954507555
-    END
     
 Informo os dados da minha cota contemplada
     Wait Until Element Is Visible    ${fld_group}    ${GENERAL_TIMEOUT}

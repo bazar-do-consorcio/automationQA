@@ -6,5 +6,6 @@ Resource    pages/cadastro_page.robot
 Resource    pages/user_page.robot
 Resource    pages/login_page.robot
 
+
 *** Variables ***
 ${BASE_URL}    https://staging.bazardoconsorcio.com.br/
