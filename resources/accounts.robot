@@ -2,12 +2,17 @@
 
 Library    DateTime
 Library    FakerLibrary       locale=pt_BR
+Library    ImapLibrary
 
 
 *** Variables ***
 #Login
 ${LOGIN}   george.paes@bazardoconsorcio.com.br
 ${PASSWORD}    Teste@123
+${PASSWORD_OPERATOR}    Ab123456!
+${OPERADOR}    backup.whatsapp@bazardoconsorcio.com.br
+${OPERADOR_PWD}    8zn!QeEJ3Q
+${OPERADOR_IMAP}    dgwhtxnufbxypxla
 
 *** Keywords ***
 
@@ -27,6 +32,21 @@ Gerar email aleatório
     ${EMAIL}  FakerLibrary.Email
     [Return]    ${EMAIL}
 
+Gerar email valido
+    ${date}     Get Current Date    result_format=%Y%m%d%H%M%S
+    ${EMAIL}    Set Variable    backup.whatsapp+${date}@bazardoconsorcio.com.br
 
+    [Return]    ${EMAIL}
+
+Abrir Email
+    Open Mailbox    host=imap.gmail.com    user=${OPERADOR}    password=${OPERADOR_IMAP}
+    Delete All Emails
+
+Verificar Email
+    Abrir Email    
+    ${LATEST}=    Wait For Email    sender=atendimento@bazardoconsorcio.com.br    timeout=60    decode=utf-8
+    ${HTML}=    Get Links From Email    ${LATEST}
+    Open Link From Email    email_index=${HTML}     link_index=1
+    
 
 

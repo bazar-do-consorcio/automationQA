@@ -33,3 +33,9 @@ Login é efetuado com sucesso
 Logout é efetuado com sucesso
     Wait Until Element Is Enabled    ${alert_login}    ${GENERAL_TIMEOUT}
     Element Should Contain    ${alert_login}    Saiu com sucesso. 
+
+Efetuar o login do operador
+    Wait Until Element Is Enabled    ${user_email}    ${GENERAL_TIMEOUT}
+    Input Text    ${user_email}    ${OPERADOR}
+    Input Text    ${user_password}    ${OPERADOR_PWD}
+    Click Element    ${btn_logar}

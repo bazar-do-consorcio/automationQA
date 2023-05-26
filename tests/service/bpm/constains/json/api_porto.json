@@ -1,0 +1,21 @@
+{
+	"token": "bb75e9431e42827ca0e0ea534d22c7c4",
+	"data": {
+		"name": "TESTE DUPLA TITULARIDADE titus",
+		"cpf": "56190535046",
+		"email": "GEORGE.PAES+23@BAZARDOCONSORCIO.COM.BR",
+		"phone": "551195175320",
+		"uuid": "9000830-352000",
+		"titular": true,
+		"participacao": 100,
+		"rg": "5478963125",
+		"ocupation": "0",
+		"address": "AL DAS PAPOULAS",
+		"district": "RESID PRIMAVERA",
+		"city": "PIRATININGA",
+		"state": "SP",
+		"zip": "17492224",
+		"secondary_phone": "0",
+		"tertiary_phone": "0"
+	}
+}

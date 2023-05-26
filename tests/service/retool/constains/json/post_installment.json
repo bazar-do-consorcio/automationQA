@@ -1,0 +1,9 @@
+{
+	"cota_id": 1,
+	"valor_parcela": 200.0,
+	"data_vencimento": "2023-03-10T10:00:00",
+	"linha_digitavel": "34191751243456787123041234560005693520000026035",
+	"parcela_paga": false,
+	"data_pagamento_parcela": null,
+  "status_type_desc": "A PAGAR"
+}

@@ -1,0 +1,59 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "gestao_parcela_id": {
+        "type": "integer"
+      },
+      "cota_id": {
+        "type": "integer"
+      },
+      "valor_parcela": {
+        "type": "number"
+      },
+      "valor_pago": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "data_vencimento_parcela": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "linha_digitavel": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "parcela_paga": {
+        "type": "boolean"
+      },
+      "data_pagamento_parcela": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "status_gestao_parcela_id": {
+        "type": "integer"
+      },
+      "status_type_gestao_parcelas_id": {
+        "type": "integer"
+      },
+      "valid_from": {
+        "type": "string"
+      },
+      "valid_to": {
+        "type": "null"
+      },
+      "status_type_desc": {
+        "type": "string"
+      }
+    }
+  }
+}

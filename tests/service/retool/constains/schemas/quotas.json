@@ -1,0 +1,83 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "cota_id": {
+        "type": "integer"
+      },
+      "administradora_id": {
+        "type": "integer"
+      },
+      "grupo_id": {
+        "type": "integer"
+      },
+      "cota_adm": {
+        "type": "string"
+      },
+      "external_reference": {
+        "type": "string"
+      },
+      "cota": {
+        "type": "string"
+      },
+      "versao": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "contrato": {
+        "type": "string"
+      },
+      "fundo_id": {
+        "type": "integer"
+      },
+      "nome_administradora": {
+        "type": "string"
+      },
+      "short_name": {
+        "type": "string"
+      },
+      "identificador_grupo": {
+        "type": "string"
+      },
+      "fundo_desc": {
+        "type": "string"
+      },
+      "fundo_cnpj": {
+        "type": "string"
+      },
+      "situacao_cota": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "cota_resgatada": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "estrategia_final": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "status_type_id": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "status_type_desc": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    }
+  }
+}

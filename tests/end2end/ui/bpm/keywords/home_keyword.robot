@@ -8,8 +8,14 @@ Resource    ../Base.robot
 *** Keywords ***   
 
 Acesso a url do BPM
-    Go To       ${BASE_URL}
+    Go To       ${URL_USER}
     Wait Until Element Is Enabled    ${btn_vender}    ${GENERAL_TIMEOUT}
+
+Acesso a url do BPM operador
+    Go To       ${URL_OPERATOR}
+    Aceita termos de utilização de cookies
+    Wait Until Element Is Enabled     ${user_email}    ${GENERAL_TIMEOUT}
+   
 
 Clicar no botão Vender
     Click Element     ${btn_vender}

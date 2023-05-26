@@ -2,6 +2,7 @@
 Library     SeleniumLibrary
 Resource    ../resources/accounts.robot
 Resource    ../resources/utils.robot
+Resource    ../resources/enums.robot
 
 *** Variables ***
 
