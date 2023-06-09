@@ -1,0 +1,74 @@
+{
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "cota_id": {
+          "type": "integer"
+        },
+        "cota_adm": {
+          "type": "string"
+        },
+        "cota": {
+          "type": "string"
+        },
+        "grupo": {
+          "type": "string"
+        },
+        "contrato": {
+          "type": "string"
+        },
+        "short_name": {
+          "type": "string"
+        },
+        "fundo_desc": {
+          "type": "string"
+        },
+        "data_assembleia": {
+          "type": "string"
+        },
+        "bem_atual": {
+          "type": "number"
+        },
+        "data_primeira_solicitacao": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "data_solicitacao_troca": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "data_resposta_adm": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "motivo": {
+          "type": "null"
+        },
+        "data_troca_do_bem": {
+          "type": "null"
+        },
+        "numero_tentativa": {
+          "type": [
+            "null",
+            "integer"
+          ]
+        },
+        "bem_resposta_adm": {
+          "type": "null"
+        },
+        "bem_troca": {
+          "type": "number"
+        },
+        "status_bem_atual_desc": {
+          "type": "string"
+        }
+      }
+    }
+  }

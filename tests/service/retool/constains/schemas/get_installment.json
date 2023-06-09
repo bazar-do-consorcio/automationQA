@@ -10,19 +10,19 @@
         "type": "integer"
       },
       "valor_parcela": {
-        "type": "number"
-      },
-      "valor_pago": {
         "type": [
           "number",
           "null"
         ]
       },
-      "data_vencimento_parcela": {
+      "valor_pago": {
         "type": [
-          "string",
-          "null"
+          "null",
+          "number"
         ]
+      },
+      "data_vencimento_parcela": {
+        "type": "string"
       },
       "linha_digitavel": {
         "type": [
@@ -39,20 +39,62 @@
           "string"
         ]
       },
+      "cota_adm": {
+        "type": "string"
+      },
+      "contrato": {
+        "type": "string"
+      },
+      "cota": {
+        "type": "string"
+      },
+      "grupo": {
+        "type": "string"
+      },
+      "situacao_cota": {
+        "type": "string"
+      },
+      "quota_status_type_desc": {
+        "type": "string"
+      },
+      "fundo_desc": {
+        "type": "string"
+      },
+      "nome_administradora": {
+        "type": "string"
+      },
+      "short_name": {
+        "type": "string"
+      },
+      "data_assembleia": {
+        "type": "string"
+      },
       "status_gestao_parcela_id": {
-        "type": "integer"
+        "type": [
+          "integer",
+          "null"
+        ]
       },
       "status_type_gestao_parcelas_id": {
-        "type": "integer"
+        "type": [
+          "integer",
+          "null"
+        ]
       },
       "valid_from": {
-        "type": "string"
+        "type": [
+          "string",
+          "null"
+        ]
       },
       "valid_to": {
         "type": "null"
       },
       "status_type_desc": {
-        "type": "string"
+        "type": [
+          "string",
+          "null"
+        ]
       }
     }
   }

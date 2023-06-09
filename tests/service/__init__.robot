@@ -1,2 +1,2 @@
 *** Settings ***
-Force Tags    back-end
+Force Tags    backend
