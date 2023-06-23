@@ -5,9 +5,11 @@ Resource    ../Base.robot
 
 *** Keywords ***      
 
-Selecionar a administradora Itaú
-    Wait Until Element Is Enabled    ${option_itau}    ${GENERAL_TIMEOUT}
-    Click Element    ${option_itau}
+Selecionar a administradora ${ADM}
+    ${option}=    Selecionar adm mar aberto
+    ...           adm=${ADM}  
+    Wait Until Element Is Enabled    ${option}    ${GENERAL_TIMEOUT}
+    Click Element    ${option}
 
 Avanço para a próxima etapa
     Wait Until Element Is Enabled    ${btn_avancar}    ${GENERAL_TIMEOUT}
@@ -40,6 +42,8 @@ Informar os dados do usuário ${TYPE_CLIENT}
 
     Input Text    ${fld_email}     ${EMAIL}
     Input Text    ${fld_numberCel}    11954507555
+
+    Set Global Variable    ${name_user}    ${NAME}
     
 Informo os dados da minha cota contemplada
     Wait Until Element Is Visible    ${fld_group}    ${GENERAL_TIMEOUT}

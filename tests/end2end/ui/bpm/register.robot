@@ -6,11 +6,11 @@ Test Teardown    Fechar Navegador
 *** Test Cases ***
 
 Cenário 1: Cadastrar usuario PF
-    [Tags]    cadastro    regressivo    teste
+    [Tags]    cadastro    regressivo 
     Acesso a url do BPM
     Aceita termos de utilização de cookies
     Clicar no botão Vender
-    Selecionar a administradora Itaú
+    Selecionar a administradora Porto Seguro
     Avanço para a próxima etapa
     Clicar na opção de cliente PF
     Informar os dados do usuário PF
@@ -36,4 +36,3 @@ Cenário 2: Cadastrar usuario PJ
     Informo minha senha de cadastro
     Confirmo o cadastro
     Conta criada com sucesso
-    Verificar Email

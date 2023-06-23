@@ -1,0 +1,10 @@
+{
+    "boleto_type_id": 2,
+    "boleto_type_desc": "REATIVACAO",
+    "cota_id": 1,
+    "linha_digitavel": "34191.75124 34567.871230 41234.560005 7 93820000026035",
+    "data_vencimento": "2023-05-05T20:00:00",
+    "valor": 1255.55,
+    "data_pagamento": "2023-06-01T08:06:46",
+    "valor_pago": 12000.0
+}

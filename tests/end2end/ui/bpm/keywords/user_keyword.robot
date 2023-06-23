@@ -5,4 +5,8 @@ Library    String
 Resource    ../Base.robot
 
 
-*** Keywords ***   
+*** Keywords ***
+
+Abro o navegador
+    Fechar Navegador
+    Abrir Navegador

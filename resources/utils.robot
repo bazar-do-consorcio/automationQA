@@ -36,5 +36,15 @@ Generate uuid quota
 
     [Return]    ${uuid}
 
+Generate dateTime
+    ${dateTime}    Get Current Date    result_format=%Y%m%dT%H%M%S
 
+    [Return]    ${dateTime}
+
+Generate Boleto
+    ${data}    Get Current Date    result_format=%Y%m%d
+    ${hora}    Get Current Date    result_format=%H%M%S
+    ${milisegundo}     Get Current Date    result_format=%f
+
+    [Return]    001 9 05009 5 00${data} 9 0000${hora} 4 3 3737 0000${milisegundo}
 

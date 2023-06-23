@@ -1,0 +1,50 @@
+{
+    "type": "object",
+    "properties": {
+      "created_at": {
+        "type": "string"
+      },
+      "modified_at": {
+        "type": "string"
+      },
+      "deleted_at": {
+        "type": "null"
+      },
+      "created_by": {
+        "type": "integer"
+      },
+      "modified_by": {
+        "type": "integer"
+      },
+      "deleted_by": {
+        "type": "null"
+      },
+      "is_deleted": {
+        "type": "boolean"
+      },
+      "boleto_id": {
+        "type": "integer"
+      },
+      "boleto_type_id": {
+        "type": "integer"
+      },
+      "cota_id": {
+        "type": "integer"
+      },
+      "linha_digitavel": {
+        "type": "string"
+      },
+      "data_vencimento": {
+        "type": "string"
+      },
+      "valor": {
+        "type": "number"
+      },
+      "data_pagamento": {
+        "type": "string"
+      },
+      "valor_pago": {
+        "type": "number"
+      }
+    }
+  }

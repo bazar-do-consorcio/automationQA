@@ -1,0 +1,38 @@
+{
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "boleto_id": {
+          "type": "integer"
+        },
+        "boleto_type_id": {
+          "type": "integer"
+        },
+        "cota_id": {
+          "type": "integer"
+        },
+        "linha_digitavel": {
+          "type": "string"
+        },
+        "data_vencimento": {
+          "type": "string"
+        },
+        "valor": {
+          "type": "number"
+        },
+        "data_pagamento": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "valor_pago": {
+          "type": [
+            "null",
+            "number"
+          ]
+        }
+      }
+    }
+  }

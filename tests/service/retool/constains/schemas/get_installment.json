@@ -15,13 +15,16 @@
           "null"
         ]
       },
-      "valor_pago": {
+      "data_vencimento_parcela": {
+        "type": "string"
+      },
+      "valid_to": {
         "type": [
-          "null",
-          "number"
+          "string",
+          "null"
         ]
       },
-      "data_vencimento_parcela": {
+      "valid_from": {
         "type": "string"
       },
       "linha_digitavel": {
@@ -30,14 +33,23 @@
           "null"
         ]
       },
-      "parcela_paga": {
-        "type": "boolean"
-      },
-      "data_pagamento_parcela": {
+      "data_pagamento": {
         "type": [
           "null",
           "string"
         ]
+      },
+      "valor_pago": {
+        "type": [
+          "null",
+          "number"
+        ]
+      },
+      "status_type_desc": {
+        "type": "null"
+      },
+      "situacao_cota": {
+        "type": "null"
       },
       "cota_adm": {
         "type": "string"
@@ -49,9 +61,6 @@
         "type": "string"
       },
       "grupo": {
-        "type": "string"
-      },
-      "situacao_cota": {
         "type": "string"
       },
       "quota_status_type_desc": {
@@ -69,32 +78,8 @@
       "data_assembleia": {
         "type": "string"
       },
-      "status_gestao_parcela_id": {
-        "type": [
-          "integer",
-          "null"
-        ]
-      },
       "status_type_gestao_parcelas_id": {
-        "type": [
-          "integer",
-          "null"
-        ]
-      },
-      "valid_from": {
-        "type": [
-          "string",
-          "null"
-        ]
-      },
-      "valid_to": {
         "type": "null"
-      },
-      "status_type_desc": {
-        "type": [
-          "string",
-          "null"
-        ]
       }
     }
   }

@@ -1,5 +1,6 @@
 *** Settings ***
 Resource    ../Base.robot
+Resource    keywords/retool_keywords.robot
 Library    Collections
 
 *** Variables ***
@@ -12,6 +13,8 @@ ${RETOOL_SCHEMAS}    ${RETOOL_DIR}/constains/schemas
 ...        ByPatchInstallment=${RETOOL_JSONS}/patch_installment.json
 ...        ByPatchReactivation=${RETOOL_JSONS}/patch_reactivation.json
 ...        ByPatchAssetChanges=${RETOOL_JSONS}/patch_assetChanges.json
+...        ByPatchPayment=${RETOOL_JSONS}/patch_payment.json
+...        ByPostPayment=${RETOOL_JSONS}/post_payment.json
 
 ${TOKEN}      1NrcncqyUG9oJ5hShJq0aafHfWcBWqFdPVBSpee6
 
@@ -24,3 +27,6 @@ ${TOKEN}      1NrcncqyUG9oJ5hShJq0aafHfWcBWqFdPVBSpee6
 ...         ByPatchReactivation=https://hexa.bazar-sandbox.technology/reactivation
 ...         ByGetAssetChanges=https://hexa.bazar-sandbox.technology/asset_changes
 ...         ByPatchAssetChanges=https://hexa.bazar-sandbox.technology/quotas
+...         ByGetPayment=https://hexa.bazar-sandbox.technology/payment
+...         ByPatchPayment=https://hexa.bazar-sandbox.technology/payment
+...         ByPostPayment=https://hexa.bazar-sandbox.technology/payment

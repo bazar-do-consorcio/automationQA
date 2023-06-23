@@ -1,6 +1,5 @@
 *** Settings ***
 Resource    Base.robot
-Resource    keywords/retool_keywords.robot
 Library    json
 Library    JSONLibrary
 

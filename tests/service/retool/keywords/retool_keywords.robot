@@ -2,6 +2,7 @@
 Resource    ../Base.robot
 Resource    ../asset_changes.robot
 Library    RequestsLibrary
+Library    FakerLibrary
 
 *** Keywords ***
 
@@ -31,6 +32,11 @@ Post request with x-api-key
     ...    x-api-key=${TOKEN}
     
     ${body}    Load Json From File    ${BODY}[${type_name}]
+
+    IF    "${type_name}" == "ByPostPayment"
+        ${boleto}=    Generate Boleto
+        ${body}    Update Value To Json    ${body}    $.linha_digitavel    ${boleto}
+    END
 
     Create Session
     ...    alias=post_request
@@ -85,6 +91,11 @@ Patch request with x-api-key
 
         END   
         
+    END
+
+    IF    "${type_name}" == "ByPatchPayment"
+        ${boleto}=    Generate Boleto
+        ${body}    Update Value To Json    ${body}    $.linha_digitavel    ${boleto}
     END
 
     Create Session

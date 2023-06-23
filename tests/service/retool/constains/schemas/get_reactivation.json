@@ -1,176 +1,182 @@
 {
-    "type": "array",
-    "items": {
-      "type": "object",
-      "properties": {
-        "gestao_reativacao_id": {
-          "type": "integer"
-        },
-        "cota_id": {
-          "type": "integer"
-        },
-        "cota_adm": {
-          "type": "string"
-        },
-        "grupo": {
-          "type": "string"
-        },
-        "contrato": {
-          "type": "string"
-        },
-        "data_de_transferencia": {
-          "type": "string"
-        },
-        "short_name": {
-          "type": "string"
-        },
-        "fundo_desc": {
-          "type": "string"
-        },
-        "num_cota_atual": {
-          "type": "string"
-        },
-        "versao_cota_atual": {
-          "type": "null"
-        },
-        "num_cota_reativacao": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "versao_cota_reativacao": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "reativacao_solicitada": {
-          "type": "boolean"
-        },
-        "data_solicitacao": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "feedback_adm": {
-          "type": "boolean"
-        },
-        "data_feedback_adm": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "reativacao_efetivada": {
-          "type": "boolean"
-        },
-        "data_reativacao": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "data_primeira_solicitacao": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "numero_tentativa": {
-          "type": [
-            "integer",
-            "null"
-          ]
-        },
-        "valor_reativacao": {
-          "type": [
-            "number",
-            "null"
-          ]
-        },
-        "motivo": {
-          "type": [
-            "null",
-            "string"
-          ]
-        },
-        "valid_to": {
-          "type": "null"
-        },
-        "valid_from": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "status_type_gestao_reativacao_id": {
-          "type": "integer"
-        },
-        "reativacao_status_type_desc": {
-          "type": "string"
-        },
-        "boleto_id": {
-          "type": [
-            "integer",
-            "null"
-          ]
-        },
-        "boleto_type_id": {
-          "type": [
-            "integer",
-            "null"
-          ]
-        },
-        "linha_digitavel": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "data_vencimento": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "valor": {
-          "type": [
-            "number",
-            "null"
-          ]
-        },
-        "data_pagamento": {
-          "type": "null"
-        },
-        "valor_pago": {
-          "type": "null"
-        },
-        "status_type_boleto_id": {
-          "type": [
-            "integer",
-            "null"
-          ]
-        },
-        "boleto_status_type_desc": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "type_desc": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "payment_desc": {
-          "type": [
-            "string",
-            "null"
-          ]
-        }
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "gestao_reativacao_id": {
+        "type": "integer"
+      },
+      "cota_id": {
+        "type": "integer"
+      },
+      "cota_adm": {
+        "type": "string"
+      },
+      "grupo": {
+        "type": "string"
+      },
+      "contrato": {
+        "type": "string"
+      },
+      "data_de_transferencia": {
+        "type": "string"
+      },
+      "short_name": {
+        "type": "string"
+      },
+      "fundo_desc": {
+        "type": "string"
+      },
+      "num_cota_atual": {
+        "type": "string"
+      },
+      "versao_cota_atual": {
+        "type": "null"
+      },
+      "num_cota_reativacao": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "versao_cota_reativacao": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "reativacao_solicitada": {
+        "type": "boolean"
+      },
+      "data_solicitacao": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "feedback_adm": {
+        "type": "boolean"
+      },
+      "data_feedback_adm": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "reativacao_efetivada": {
+        "type": "boolean"
+      },
+      "data_reativacao": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "data_primeira_solicitacao": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "numero_tentativa": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "valor_reativacao": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "motivo": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "valid_to": {
+        "type": "null"
+      },
+      "valid_from": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "status_type_gestao_reativacao_id": {
+        "type": "integer"
+      },
+      "reativacao_status_type_desc": {
+        "type": "string"
+      },
+      "boleto_id": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "boleto_type_id": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "linha_digitavel": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "data_vencimento": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "valor": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "data_pagamento": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "valor_pago": {
+        "type": [
+          "null",
+          "number"
+        ]
+      },
+      "status_type_boleto_id": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "boleto_status_type_desc": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "type_desc": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "payment_desc": {
+        "type": [
+          "string",
+          "null"
+        ]
       }
     }
   }
+}

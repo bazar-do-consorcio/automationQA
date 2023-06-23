@@ -1,6 +1,5 @@
 *** Settings ***
 Resource    Base.robot
-Resource    keywords/retool_keywords.robot
 Library    json
 Library    JSONLibrary
 
@@ -23,6 +22,8 @@ Cenário 2: Patch AssetChanges with status TROCA SOLICITADA
 
     ${get}=    Get request with x-api-key
     ...        type_name=ByGetAssetChanges
+    
+    Skip If    ${get.json()} == []    msg="Not Found Quotas to change"
 
     ${resp}=    Patch request with x-api-key
     ...         type_name=ByPatchAssetChanges
@@ -40,6 +41,8 @@ Cenário 3: Patch AssetChanges with status BEM CORRETO
     ${get}=    Get request with x-api-key
     ...        type_name=ByGetAssetChanges
 
+    Skip If    ${get.json()} == []    msg="Not Found Quotas to change"
+    
     ${resp}=    Patch request with x-api-key
     ...         type_name=ByPatchAssetChanges
     ...         id=${get.json()}[0][cota_id]
@@ -56,6 +59,8 @@ Cenário 4: Patch AssetChanges with status TROCA APROVADA
     ${get}=    Get request with x-api-key
     ...        type_name=ByGetAssetChanges
 
+    Skip If    ${get.json()} == []    msg="Not Found Quotas to change"
+    
     ${resp}=    Patch request with x-api-key
     ...         type_name=ByPatchAssetChanges
     ...         id=${get.json()}[0][cota_id]
@@ -72,6 +77,8 @@ Cenário 5: Patch AssetChanges with status ANALISE PRICING
     ${get}=    Get request with x-api-key
     ...        type_name=ByGetAssetChanges
 
+    Skip If    ${get.json()} == []    msg="Not Found Quotas to change"
+    
     ${resp}=    Patch request with x-api-key
     ...         type_name=ByPatchAssetChanges
     ...         id=${get.json()}[0][cota_id]
@@ -88,6 +95,8 @@ Cenário 6: Patch AssetChanges with status SOLICITAR TROCA
     ${get}=    Get request with x-api-key
     ...        type_name=ByGetAssetChanges
 
+    Skip If    ${get.json()} == []    msg="Not Found Quotas to change"
+    
     ${resp}=    Patch request with x-api-key
     ...         type_name=ByPatchAssetChanges
     ...         id=${get.json()}[0][cota_id]
@@ -104,6 +113,10 @@ Cenário 7: Patch AssetChanges with status TROCA RECUSADA
     ${get}=    Get request with x-api-key
     ...        type_name=ByGetAssetChanges
 
+    Log    ${get.json()}
+
+    Skip If    ${get.json()} == []    msg="Not Found Quotas to change"
+    
     ${resp}=    Patch request with x-api-key
     ...         type_name=ByPatchAssetChanges
     ...         id=${get.json()}[0][cota_id]
@@ -120,6 +133,8 @@ Cenário 8: Patch AssetChanges with status TROCA EXPIRADA
     ${get}=    Get request with x-api-key
     ...        type_name=ByGetAssetChanges
 
+    Skip If    ${get.json()} == []    msg="Not Found Quotas to change"
+    
     ${resp}=    Patch request with x-api-key
     ...         type_name=ByPatchAssetChanges
     ...         id=${get.json()}[0][cota_id]

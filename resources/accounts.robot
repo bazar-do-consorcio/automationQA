@@ -17,7 +17,7 @@ ${OPERADOR_IMAP}    dgwhtxnufbxypxla
 *** Keywords ***
 
 Gerar nome aleatório
-    ${NAME}  FakerLibrary.Name
+    ${NAME}  FakerLibrary.Name Nonbinary
     [Return]    ${NAME}
 
 Gerar cpf aleatório
@@ -45,8 +45,14 @@ Abrir Email
 Verificar Email
     Abrir Email    
     ${LATEST}=    Wait For Email    sender=atendimento@bazardoconsorcio.com.br    timeout=60    decode=utf-8
-    ${HTML}=    Get Links From Email    ${LATEST}
-    Open Link From Email    email_index=${HTML}     link_index=1
+    ${EMAIL}=    Get Email Body    ${LATEST}
+    ${LINK}=    Get Links From Email    ${LATEST}
+    Log    ${LINK}
+    Open Link From Email    email_index=${EMAIL}    link_index=0
+    #${link}=    Get Links From Email     ${LATEST}
+    #Log    ${link}
+    #${HTML}=    Open Link From Email    ${LATEST}
+    
     
 
 
