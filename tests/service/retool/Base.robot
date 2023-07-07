@@ -20,7 +20,7 @@ ${RETOOL_SCHEMAS}    ${RETOOL_DIR}/constains/schemas
 
 ${TOKEN}      1NrcncqyUG9oJ5hShJq0aafHfWcBWqFdPVBSpee6
 
-&{URI}      ByQuotas=https://hexa.bazar-sandbox.technology/quotas
+&{URI}      ByQuotas=https://hexa.bazar-sandbox.technology/quotas?page=0&size=10000
 ...         ByQuota=https://hexa.bazar-sandbox.technology/quota
 ...         ByGetInstallment=https://hexa.bazar-sandbox.technology/installment
 ...         ByPostInstallment=https://hexa.bazar-sandbox.technology/installment

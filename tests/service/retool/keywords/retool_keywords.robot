@@ -37,7 +37,7 @@ Post request with x-api-key
         ${body}    Update Value To Json    ${body}    $.linha_digitavel    ${boleto}
     END
 
-    IF    "${type_name}" == "ByPlanContemplation"
+    IF    "${type_name}" == "ByPlanContemplation" or "${type_name}" == "ByPlanContemplationCarrego"
         ${cota_adm}=    Generate uuid quota
         ${body}    Update Value To Json    ${body}    $.input.cota.cota_adm    ${cota_adm}        
         ${body}    Update Value To Json    ${body}    $.cota_adm    ${cota_adm}

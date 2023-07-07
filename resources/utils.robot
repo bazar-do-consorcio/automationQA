@@ -4,6 +4,7 @@ Library    OperatingSystem
 Library    json
 Library    RequestsLibrary
 Library    JSONLibrary
+Library    Collections
 Library    ../robotEnv/lib/site-packages/robot/libraries/DateTime.py
 
 *** Keywords ***
@@ -48,3 +49,58 @@ Generate Boleto
 
     [Return]    001 9 05009 5 00${data} 9 0000${hora} 4 3 3737 0000${milisegundo}
 
+Locate object    
+    [Arguments]    ${array}
+    ...            ${field}
+    ...            ${value}
+
+    ${length}    Get Length    ${array.json()}
+    ${position}    Set Variable    0
+    ${object}    Set Variable    ""      
+
+    WHILE    ${position} < ${length}
+    ${objects}=    Set Variable    ${array.json()}[${position}]
+    Log Many   ${objects}[${field}]    ${value}
+    
+        IF    ${objects}[${field}] == ${value}
+            ${object}=    Set Variable  ${objects}    
+        END
+        
+        ${position}=    Evaluate    ${position} + 1
+
+    END
+
+    IF    ${object} == ""
+
+        Fail    msg="Object not found"
+
+    END
+
+Locate object with Return
+    [Arguments]    ${array}
+    ...            ${field}
+    ...            ${value}
+
+    ${length}    Get Length    ${array.json()}
+    ${position}    Set Variable    0
+    ${object}    Set Variable    ""      
+
+    WHILE    ${position} < ${length}
+    ${objects}=    Set Variable    ${array.json()}[${position}]
+    Log Many   ${objects}[${field}]    ${value}
+    
+        IF    ${objects}[${field}] == ${value}
+            ${object}=    Set Variable  ${objects}    
+        END
+        
+        ${position}=    Evaluate    ${position} + 1
+
+    END
+
+    IF    ${object} == ""
+
+        Fail    msg="Object not found"
+
+    END
+
+    [Return]    ${object}
