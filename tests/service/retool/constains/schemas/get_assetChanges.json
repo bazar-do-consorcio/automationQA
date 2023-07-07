@@ -25,7 +25,10 @@
           "type": "string"
         },
         "data_assembleia": {
-          "type": "string"
+          "type": [
+            "null",
+             "string"
+           ]
         },
         "bem_atual": {
           "type": "number"
@@ -49,7 +52,10 @@
           ]
         },
         "motivo": {
-          "type": "null"
+          "type": [
+           "null",
+            "string"
+          ]
         },
         "data_troca_do_bem": {
           "type": "null"
@@ -61,7 +67,10 @@
           ]
         },
         "bem_resposta_adm": {
-          "type": "null"
+          "type": [
+            "null",
+            "number"
+          ]
         },
         "bem_troca": {
           "type": "number"

@@ -41,7 +41,10 @@
         "type": "boolean"
       },
       "data_pdc": {
-        "type": "string"
+        "type": [
+          "null",
+          "string"
+        ] 
       },
       "bem_resposta_adm": {
         "type": [

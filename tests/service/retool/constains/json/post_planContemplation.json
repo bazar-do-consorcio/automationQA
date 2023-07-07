@@ -1,0 +1,55 @@
+{
+    "input": {
+        "grupo": {
+            "data_encerramento": "2032-06-05T00:00:00Z",
+            "adm": "SANTANDER"
+        },
+        "valores_entrada": {
+            "tipo": "Transferencia",
+            "estrategia": "CONTEMPLACAO"
+        },
+        "cota": {
+            "tipo_bem": "IMOVEIS",
+            "grupo": "3053",
+            "cota_adm": "123SANTANDERteste3",
+            "uuid_adm": "30118052",
+            "contrato": "12313223",
+            "cota": "1002"
+        },
+        "data_transferencia": "2023-04-25T16:45:20Z",
+        "fundo": "ATIVOS ESPECIAIS III",
+        "cota_bem": {
+            "data_info": "2023-05-05T00:00:00Z",
+            "valor_bem": "283686.9"
+        },
+        "cota_situacao": {
+            "data_info": "2023-05-05T00:00:00Z",
+            "situacao": "ATIVA"
+        }
+    },
+    "decisao_manual": {
+        "plano_bem": "TROCAR",
+        "estrategia_final": "CONTEMPLACAO",
+        "plano_lance": "LANCE"
+    },
+    "cota": {
+        "desembolso_total": "9324.85",
+        "valor_do_bem_apos_troca": "184396.47",
+        "com_troca_de_bem": true,
+        "lance_grupo": 0.15
+    },
+    "cota_adm": "123SANTANDERteste3",
+    "created_at": "2023-05-25T17:09:44+00:00",
+    "pdc": {
+        "valor_recebimento": "47502.1342",
+        "inflacao_mais": "0.126",
+        "prazo": "3329",
+        "cdi_prazo_cota": "0.124",
+        "tir": "0.1954",
+        "data_recebimento": "2032-06-05",
+        "inflacao": "0.060958",
+        "lucro": "38177.2842",
+        "spread": "0.0636",
+        "valor_lance": "1231.12"
+    }
+}

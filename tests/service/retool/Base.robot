@@ -15,6 +15,8 @@ ${RETOOL_SCHEMAS}    ${RETOOL_DIR}/constains/schemas
 ...        ByPatchAssetChanges=${RETOOL_JSONS}/patch_assetChanges.json
 ...        ByPatchPayment=${RETOOL_JSONS}/patch_payment.json
 ...        ByPostPayment=${RETOOL_JSONS}/post_payment.json
+...        ByPlanContemplation=${RETOOL_JSONS}/post_planContemplation.json
+...        ByPlanContemplationCarrego=${RETOOL_JSONS}/post_planContemplationCarrego.json
 
 ${TOKEN}      1NrcncqyUG9oJ5hShJq0aafHfWcBWqFdPVBSpee6
 
@@ -30,3 +32,6 @@ ${TOKEN}      1NrcncqyUG9oJ5hShJq0aafHfWcBWqFdPVBSpee6
 ...         ByGetPayment=https://hexa.bazar-sandbox.technology/payment
 ...         ByPatchPayment=https://hexa.bazar-sandbox.technology/payment
 ...         ByPostPayment=https://hexa.bazar-sandbox.technology/payment
+...         ByPlanContemplation=https://hexa.bazar-sandbox.technology/plan_of_contemplation
+...         ByPlanContemplationCarrego=https://hexa.bazar-sandbox.technology/plan_of_contemplation
+...         ByGetBids=https://hexa.bazar-sandbox.technology/bids

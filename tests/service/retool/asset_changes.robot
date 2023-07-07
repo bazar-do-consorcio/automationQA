@@ -20,6 +20,9 @@ Cenário 2: Patch AssetChanges with status TROCA SOLICITADA
     
     Set Global Variable    ${status}    TROCA SOLICITADA
 
+    ${post}=    Post request with x-api-key
+    ...         type_name=ByPlanContemplation
+
     ${get}=    Get request with x-api-key
     ...        type_name=ByGetAssetChanges
     
@@ -37,6 +40,9 @@ Cenário 3: Patch AssetChanges with status BEM CORRETO
     [Tags]    assetChanges    regressivo
     
     Set Global Variable    ${status}    BEM CORRETO
+
+    ${post}=    Post request with x-api-key
+    ...         type_name=ByPlanContemplation
 
     ${get}=    Get request with x-api-key
     ...        type_name=ByGetAssetChanges
@@ -56,6 +62,9 @@ Cenário 4: Patch AssetChanges with status TROCA APROVADA
     
     Set Global Variable    ${status}    TROCA APROVADA
 
+    ${post}=    Post request with x-api-key
+    ...         type_name=ByPlanContemplation
+
     ${get}=    Get request with x-api-key
     ...        type_name=ByGetAssetChanges
 
@@ -73,6 +82,9 @@ Cenário 5: Patch AssetChanges with status ANALISE PRICING
     [Tags]    assetChanges    regressivo
     
     Set Global Variable    ${status}    ANALISE PRICING
+
+    ${post}=    Post request with x-api-key
+    ...         type_name=ByPlanContemplation
 
     ${get}=    Get request with x-api-key
     ...        type_name=ByGetAssetChanges
@@ -92,6 +104,9 @@ Cenário 6: Patch AssetChanges with status SOLICITAR TROCA
     
     Set Global Variable    ${status}    SOLICITAR TROCA
 
+    ${post}=    Post request with x-api-key
+    ...         type_name=ByPlanContemplation
+
     ${get}=    Get request with x-api-key
     ...        type_name=ByGetAssetChanges
 
@@ -109,6 +124,9 @@ Cenário 7: Patch AssetChanges with status TROCA RECUSADA
     [Tags]    assetChanges    regressivo
     
     Set Global Variable    ${status}    TROCA RECUSADA
+
+    ${post}=    Post request with x-api-key
+    ...         type_name=ByPlanContemplation
 
     ${get}=    Get request with x-api-key
     ...        type_name=ByGetAssetChanges
@@ -129,6 +147,9 @@ Cenário 8: Patch AssetChanges with status TROCA EXPIRADA
     [Tags]    assetChanges    regressivo
     
     Set Global Variable    ${status}    TROCA EXPIRADA
+
+    ${post}=    Post request with x-api-key
+    ...         type_name=ByPlanContemplation
 
     ${get}=    Get request with x-api-key
     ...        type_name=ByGetAssetChanges

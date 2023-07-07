@@ -1,0 +1,74 @@
+{
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "gestao_lance_id": {
+          "type": "integer"
+        },
+        "cota_id": {
+          "type": "integer"
+        },
+        "valor_lance": {
+          "type": "number"
+        },
+        "data_lance": {
+          "type": "null"
+        },
+        "lance_vencedor": {
+          "type": "boolean"
+        },
+        "percentual_lance_total": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "valor_lance_embutido": {
+          "type": "null"
+        },
+        "valor_lance_recurso_proprio": {
+          "type": "null"
+        },
+        "created_at": {
+          "type": "string"
+        },
+        "valid_to": {
+          "type": "null"
+        },
+        "status_type_desc": {
+          "type": "string"
+        },
+        "cota_adm": {
+          "type": "string"
+        },
+        "grupo": {
+          "type": "string"
+        },
+        "cota": {
+          "type": "string"
+        },
+        "contrato": {
+          "type": "string"
+        },
+        "short_name": {
+          "type": "string"
+        },
+        "fund_short_name": {
+          "type": "string"
+        },
+        "plano_lance": {
+          "type": "string"
+        },
+        "data_pagamento": {
+          "type": "null"
+        },
+        "data_assembleia": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }

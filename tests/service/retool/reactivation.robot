@@ -7,6 +7,9 @@ Library    JSONLibrary
 
 Cenário 1: Get Reactivation
     [Tags]    reactivation    regressivo
+
+    ${post}=    Post request with x-api-key
+    ...         type_name=ByPlanContemplationCarrego
     
     ${resp}=    Get request with x-api-key
     ...         type_name=ByGetReactivation
@@ -18,12 +21,15 @@ Cenário 1: Get Reactivation
 Cenário 2: Patch Reactivation
     [Tags]    reactivation    regressivo
     
+    ${post}=    Post request with x-api-key
+    ...         type_name=ByPlanContemplationCarrego
+
     ${get}=    Get request with x-api-key
     ...         type_name=ByGetReactivation
 
     ${resp}=    Patch request with x-api-key
     ...         type_name=ByPatchReactivation
-    ...         id=${get.json()}[0][gestao_reativacao_id]
+    ...         id=${get.json()}[2][gestao_reativacao_id]
     
     Status Should Be    200    ${resp}
 

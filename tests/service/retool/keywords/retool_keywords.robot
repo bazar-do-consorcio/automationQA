@@ -1,6 +1,5 @@
 *** Settings ***
 Resource    ../Base.robot
-Resource    ../asset_changes.robot
 Library    RequestsLibrary
 Library    FakerLibrary
 
@@ -36,6 +35,12 @@ Post request with x-api-key
     IF    "${type_name}" == "ByPostPayment"
         ${boleto}=    Generate Boleto
         ${body}    Update Value To Json    ${body}    $.linha_digitavel    ${boleto}
+    END
+
+    IF    "${type_name}" == "ByPlanContemplation"
+        ${cota_adm}=    Generate uuid quota
+        ${body}    Update Value To Json    ${body}    $.input.cota.cota_adm    ${cota_adm}        
+        ${body}    Update Value To Json    ${body}    $.cota_adm    ${cota_adm}
     END
 
     Create Session
