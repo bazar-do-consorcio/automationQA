@@ -28,8 +28,6 @@ Cenário 2: Post Installment
 Cenário 3: Patch Installment
     [Tags]    installment    regressivo
 
-    Skip    msg="Aguardando mudança da relação com a tabela de boletos"
-
     ${get}=    Post request with x-api-key
     ...         type_name=ByPostInstallment
     

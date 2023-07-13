@@ -33,6 +33,11 @@ Cenário 2: Patch Reactivation
     
     Status Should Be    200    ${resp}
 
+    ${verify}=    Get request with x-api-key
+    ...         type_name=ByGetReactivation
+
+    Locate object    array=${verify}    field=gestao_reativacao_id    value=${resp.json()}[gestao_reativacao_id]
+
     Validate Json By Schema File    ${resp.json()}  ${RETOOL_SCHEMAS}/patch_reactivation.json
 
     Should Not Be Equal    ${get.json()}[0][gestao_reativacao_id]    ${resp.json()}[gestao_reativacao_id]

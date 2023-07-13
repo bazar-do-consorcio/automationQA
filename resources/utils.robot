@@ -42,6 +42,11 @@ Generate dateTime
 
     [Return]    ${dateTime}
 
+Generate dateTime Format
+    ${dateTime}    Get Current Date    result_format=%Y-%m-%dT%H:%M:%S
+
+    [Return]    ${dateTime}
+
 Generate Boleto
     ${data}    Get Current Date    result_format=%Y%m%d
     ${hora}    Get Current Date    result_format=%H%M%S
@@ -87,7 +92,6 @@ Locate object with Return
 
     WHILE    ${position} < ${length}
     ${objects}=    Set Variable    ${array.json()}[${position}]
-    Log Many   ${objects}[${field}]    ${value}
     
         IF    ${objects}[${field}] == ${value}
             ${object}=    Set Variable  ${objects}    

@@ -65,7 +65,10 @@
         ] 
       },
       "motivo": {
-        "type": "null"
+        "type": [
+          "null",
+          "string"
+      ]
       },
       "observacao": {
         "type": "null"

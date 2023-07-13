@@ -1,5 +1,6 @@
 *** Settings ***
 Resource    ../Base.robot
+Resource    update_body.robot
 Library    RequestsLibrary
 Library    FakerLibrary
 
@@ -33,14 +34,13 @@ Post request with x-api-key
     ${body}    Load Json From File    ${BODY}[${type_name}]
 
     IF    "${type_name}" == "ByPostPayment"
-        ${boleto}=    Generate Boleto
-        ${body}    Update Value To Json    ${body}    $.linha_digitavel    ${boleto}
-    END
 
-    IF    "${type_name}" == "ByPlanContemplation" or "${type_name}" == "ByPlanContemplationCarrego"
-        ${cota_adm}=    Generate uuid quota
-        ${body}    Update Value To Json    ${body}    $.input.cota.cota_adm    ${cota_adm}        
-        ${body}    Update Value To Json    ${body}    $.cota_adm    ${cota_adm}
+        ${body}=    Update Body by payment    ${body}
+
+    ELSE IF     "${type_name}" == "ByPlanContemplation" or "${type_name}" == "ByPlanContemplationCarrego"
+
+        ${body}=    Update Body by PlanContemplation    ${body}
+
     END
 
     Create Session
@@ -66,41 +66,16 @@ Patch request with x-api-key
 
     IF    "${type_name}" == "ByPatchAssetChanges"
         
-        IF    "${status}" == "TROCA SOLICITADA"
-            ${body}    Update Value To Json    ${body}    $.status_bem_atual_desc    ${status}
-            ${body}    Delete Object From Json    ${body}    $.bem_resposta_adm     
-
-        ELSE IF    "${status}" == "BEM CORRETO"
-            ${body}    Update Value To Json    ${body}    $.status_bem_atual_desc    ${status}
-            ${body}    Update Value To Json    ${body}    $.bem_resposta_adm    25000
-
-        ELSE IF    "${status}" == "TROCA APROVADA"
-            ${body}    Update Value To Json    ${body}    $.status_bem_atual_desc    ${status}
-            ${body}    Update Value To Json    ${body}    $.bem_resposta_adm    25000
-
-        ELSE IF    "${status}" == "ANALISE PRICING"
-            ${body}    Update Value To Json    ${body}    $.status_bem_atual_desc    ${status}
-            ${body}    Delete Object From Json    ${body}    $.bem_resposta_adm   
-
-        ELSE IF    "${status}" == "SOLICITAR TROCA"
-            ${body}    Update Value To Json    ${body}    $.status_bem_atual_desc    ${status}
-            ${body}    Delete Object From Json    ${body}    $.bem_resposta_adm   
-
-        ELSE IF    "${status}" == "TROCA RECUSADA"
-            ${body}    Update Value To Json    ${body}    $.status_bem_atual_desc    ${status}
-            ${body}    Delete Object From Json    ${body}    $.bem_resposta_adm   
-
-        ELSE IF    "${status}" == "TROCA EXPIRADA"
-            ${body}    Update Value To Json    ${body}    $.status_bem_atual_desc    ${status}
-            ${body}    Delete Object From Json    ${body}    $.bem_resposta_adm   
-
-        END   
+        ${body}=    Update Body by asset_changes    ${body}
         
-    END
+        ELSE IF     "${type_name}" == "ByPatchPayment"
 
-    IF    "${type_name}" == "ByPatchPayment"
-        ${boleto}=    Generate Boleto
-        ${body}    Update Value To Json    ${body}    $.linha_digitavel    ${boleto}
+        ${body}=    Update Body by payment    ${body}
+
+        ELSE IF     "${type_name}" == "ByPatchBids"
+
+        ${body}=    Update Body by bids    ${body}
+
     END
 
     Create Session

@@ -1,0 +1,86 @@
+{
+    "type": "object",
+    "properties": {
+      "created_at": {
+        "type": "string"
+      },
+      "modified_at": {
+        "type": "string"
+      },
+      "deleted_at": {
+        "type": "null"
+      },
+      "created_by": {
+        "type": "integer"
+      },
+      "modified_by": {
+        "type": "integer"
+      },
+      "deleted_by": {
+        "type": "null"
+      },
+      "is_deleted": {
+        "type": "boolean"
+      },
+      "gestao_lance_id": {
+        "type": "integer"
+      },
+      "cota_id": {
+        "type": "integer"
+      },
+      "status_type_gestao_lances_id": {
+        "type": "integer"
+      },
+      "valor_lance": {
+        "type": "number"
+      },
+      "data_lance": {
+        "type": "null"
+      },
+      "lance_vencedor": {
+        "type": "boolean"
+      },
+      "percentual_lance_total": {
+        "type": "number"
+      },
+      "valor_lance_embutido": {
+        "type": "null"
+      },
+      "valor_lance_recurso_proprio": {
+        "type": "null"
+      },
+      "assembleia_id": {
+        "type": [
+            "null",
+            "integer"
+        ]
+      },
+      "data_coleta_feedback": {
+        "type": "string"
+      },
+      "numero_tentativa": {
+        "type": [
+            "null",
+            "integer"
+        ]
+      },
+      "gestao_code": {
+        "type": "string"
+      },
+      "maior_lance_ganhador": {
+        "type": "null"
+      },
+      "menor_lance_ganhador": {
+        "type": "null"
+      },
+      "motivo": {
+        "type": "null"
+      },
+      "valid_from": {
+        "type": "string"
+      },
+      "valid_to": {
+        "type": "null"
+      }
+    }
+  }

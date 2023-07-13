@@ -1,53 +1,53 @@
 {
-  "type": "array",
-  "items": {
-    "type": "object",
-    "properties": {
-      "created_at": {
-        "type": "string"
-      },
-      "modified_at": {
-        "type": "string"
-      },
-      "deleted_at": {
-        "type": "null"
-      },
-      "created_by": {
-        "type": "integer"
-      },
-      "modified_by": {
-        "type": "integer"
-      },
-      "deleted_by": {
-        "type": "null"
-      },
-      "is_deleted": {
-        "type": "boolean"
-      },
-      "gestao_parcela_id": {
-        "type": "integer"
-      },
-      "cota_id": {
-        "type": "integer"
-      },
-      "valor_parcela": {
-        "type": "number"
-      },
-      "valor_pago": {
-        "type": "number"
-      },
-      "data_vencimento_parcela": {
-        "type": "string"
-      },
-      "linha_digitavel": {
-        "type": "string"
-      },
-      "parcela_paga": {
-        "type": "boolean"
-      },
-      "data_pagamento_parcela": {
-        "type": "string"
-      }
+  "type": "object",
+  "properties": {
+    "created_at": {
+      "type": "string"
+    },
+    "modified_at": {
+      "type": "string"
+    },
+    "deleted_at": {
+      "type": "null"
+    },
+    "created_by": {
+      "type": "integer"
+    },
+    "modified_by": {
+      "type": "integer"
+    },
+    "deleted_by": {
+      "type": "null"
+    },
+    "is_deleted": {
+      "type": "boolean"
+    },
+    "gestao_parcela_id": {
+      "type": "integer"
+    },
+    "status_type_gestao_parcelas_id": {
+      "type": "integer"
+    },
+    "cota_id": {
+      "type": "integer"
+    },
+    "valor_parcela": {
+      "type": "number"
+    },
+    "data_vencimento_parcela": {
+      "type": "string"
+    },
+    "valid_from": {
+      "type": "string"
+    },
+    "valid_to": {
+      "type": "null"
+    },
+    "gestao_code": {
+      "type": "string"
+    },
+    "linha_digitavel": {
+      "type": "string"
     }
   }
 }
