@@ -1,0 +1,20 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "integer"
+      },
+      "bid_id": {
+        "type": "integer"
+      },
+      "extract_url": {
+        "type": "string"
+      },
+      "extract_created_at": {
+        "type": "string"
+      }
+    }
+  }
+}

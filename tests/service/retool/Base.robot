@@ -29,7 +29,7 @@ ${TOKEN}      1NrcncqyUG9oJ5hShJq0aafHfWcBWqFdPVBSpee6
 ...         ByGetInstallment=https://hexa.bazar-sandbox.technology/installment
 ...         ByPostInstallment=https://hexa.bazar-sandbox.technology/installment
 ...         ByPatchInstallment=https://hexa.bazar-sandbox.technology/installment
-...         ByGetReactivation=https://hexa.bazar-sandbox.technology/reactivation
+...         ByGetReactivation=https://hexa.bazar-sandbox.technology/reactivation?page=0&size=10000
 ...         ByPatchReactivation=https://hexa.bazar-sandbox.technology/reactivation
 ...         ByGetAssetChanges=https://hexa.bazar-sandbox.technology/asset_changes
 ...         ByPatchAssetChanges=https://hexa.bazar-sandbox.technology/quotas

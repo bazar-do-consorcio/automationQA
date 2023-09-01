@@ -3,6 +3,7 @@
 Library    DateTime
 Library    FakerLibrary       locale=pt_BR
 Library    ImapLibrary
+Library    String
 
 
 *** Variables ***
@@ -24,6 +25,11 @@ Gerar cpf aleatório
     ${CPF}  FakerLibrary.cpf
     [Return]    ${CPF}
 
+Gerar cpf sem pontuação
+    ${CPF}  FakerLibrary.cpf
+    ${CPF_FORMATADO}=    Remove String    ${CPF}    .    - 
+    [Return]    ${CPF_FORMATADO}
+
 Gerar cnpj aleatório
     ${CNPJ}  FakerLibrary.cnpj
     [Return]    ${CNPJ}
@@ -31,6 +37,15 @@ Gerar cnpj aleatório
 Gerar email aleatório
     ${EMAIL}  FakerLibrary.Email
     [Return]    ${EMAIL}
+
+Gerar UUID aleatório
+    ${UUID}  FakerLibrary.Uuid 4
+    [Return]    ${UUID}
+
+Gerar número aleatório
+    [Arguments]    ${digits}
+    ${number}  FakerLibrary.Random Number    digits=${digits}
+    [Return]    ${number}
 
 Gerar email valido
     ${date}     Get Current Date    result_format=%Y%m%d%H%M%S

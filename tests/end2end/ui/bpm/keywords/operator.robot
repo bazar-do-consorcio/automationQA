@@ -22,6 +22,10 @@ Seleciono o tipo de consulta ${option_attribute}
     ELSE IF    ${option_attribute} == "CPFProprietario"
 
         Click Element    ${option_OwnersCPF}
+
+    ELSE IF    ${option_attribute} == "EmailProprietario"
+
+        Click Element    ${option_OwnersEmail}
                 
     END
 

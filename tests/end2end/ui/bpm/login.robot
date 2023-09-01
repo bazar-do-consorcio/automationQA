@@ -6,7 +6,7 @@ Test Teardown    Fechar Navegador
 *** Test Cases ***
 
 Cenário 1: Itau - Efetuar login
-    [Tags]    login    regressivo
+    [Tags]    login    regressivo  testesssss
     Acesso a url do BPM
     Clicar no botão Entrar
     Clicar na administradora Itaú

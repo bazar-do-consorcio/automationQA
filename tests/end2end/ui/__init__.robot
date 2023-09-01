@@ -1,2 +1,2 @@
 *** Settings ***
-Force Tags    front-end    web
+Force Tags    frontend    web

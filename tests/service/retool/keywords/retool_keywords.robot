@@ -76,6 +76,10 @@ Patch request with x-api-key
 
         ${body}=    Update Body by bids    ${body}
 
+        ELSE IF     "${type_name}" == "ByPatchReactivation"
+
+        ${body}=    Update Body by Reactivation    ${body}
+
     END
 
     Create Session

@@ -26,7 +26,7 @@ Cenário 2: Patch AssetChanges with status TROCA SOLICITADA
     ${get}=    Get request with x-api-key
     ...        type_name=ByGetAssetChanges
     
-    Skip If    ${get.json()} == []    msg="Not Found Quotas to change"
+    
 
     ${resp}=    Patch request with x-api-key
     ...         type_name=ByPatchAssetChanges
@@ -47,7 +47,7 @@ Cenário 3: Patch AssetChanges with status BEM CORRETO
     ${get}=    Get request with x-api-key
     ...        type_name=ByGetAssetChanges
 
-    Skip If    ${get.json()} == []    msg="Not Found Quotas to change"
+    
     
     ${resp}=    Patch request with x-api-key
     ...         type_name=ByPatchAssetChanges
@@ -68,7 +68,7 @@ Cenário 4: Patch AssetChanges with status TROCA APROVADA
     ${get}=    Get request with x-api-key
     ...        type_name=ByGetAssetChanges
 
-    Skip If    ${get.json()} == []    msg="Not Found Quotas to change"
+    
     
     ${resp}=    Patch request with x-api-key
     ...         type_name=ByPatchAssetChanges
@@ -89,7 +89,7 @@ Cenário 5: Patch AssetChanges with status ANALISE PRICING
     ${get}=    Get request with x-api-key
     ...        type_name=ByGetAssetChanges
 
-    Skip If    ${get.json()} == []    msg="Not Found Quotas to change"
+    
     
     ${resp}=    Patch request with x-api-key
     ...         type_name=ByPatchAssetChanges
@@ -110,7 +110,7 @@ Cenário 6: Patch AssetChanges with status SOLICITAR TROCA
     ${get}=    Get request with x-api-key
     ...        type_name=ByGetAssetChanges
 
-    Skip If    ${get.json()} == []    msg="Not Found Quotas to change"
+    
     
     ${resp}=    Patch request with x-api-key
     ...         type_name=ByPatchAssetChanges
@@ -133,7 +133,7 @@ Cenário 7: Patch AssetChanges with status TROCA RECUSADA
 
     Log    ${get.json()}
 
-    Skip If    ${get.json()} == []    msg="Not Found Quotas to change"
+    
     
     ${resp}=    Patch request with x-api-key
     ...         type_name=ByPatchAssetChanges
@@ -154,7 +154,7 @@ Cenário 8: Patch AssetChanges with status TROCA EXPIRADA
     ${get}=    Get request with x-api-key
     ...        type_name=ByGetAssetChanges
 
-    Skip If    ${get.json()} == []    msg="Not Found Quotas to change"
+    
     
     ${resp}=    Patch request with x-api-key
     ...         type_name=ByPatchAssetChanges

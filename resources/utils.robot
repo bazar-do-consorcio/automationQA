@@ -67,7 +67,7 @@ Locate object
     ${objects}=    Set Variable    ${array.json()}[${position}]
     Log Many   ${objects}[${field}]    ${value}
     
-        IF    ${objects}[${field}] == ${value}
+        IF    '${objects}[${field}]' == '${value}'
             ${object}=    Set Variable  ${objects}    
         END
         
@@ -93,7 +93,7 @@ Locate object with Return
     WHILE    ${position} < ${length}
     ${objects}=    Set Variable    ${array.json()}[${position}]
     
-        IF    ${objects}[${field}] == ${value}
+        IF    '${objects}[${field}]' == '${value}'
             ${object}=    Set Variable  ${objects}    
         END
         

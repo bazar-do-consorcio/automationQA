@@ -55,44 +55,25 @@ Update Body by PlanContemplation
 
     [Return]    ${body}
 
+Update Body by Reactivation
+    [Arguments]    ${body}
+
+    ${body}    Update Value To Json    ${body}    $.reativacao_status_type_desc    ${status}  
+
+    [Return]    ${body}
+
 Update Body by bids
     [Arguments]    ${body}
 
     ${dateTime}=    Generate dateTime Format
 
-    IF    "${status}" == "APTO OFERTAR LANCE"
-            ${body}    Update Value To Json    ${body}    $.status_type_gestao_lances_desc    ${status}
-            ${body}    Update Value To Json    ${body}    $.data_coleta_feedback    ${dateTime}     
-
-        ELSE IF    "${status}" == "NAO APTO OFERTAR LANCE"
-            ${body}    Update Value To Json    ${body}    $.status_type_gestao_lances_desc    ${status}
-            ${body}    Update Value To Json    ${body}    $.data_coleta_feedback    ${dateTime}     
-
-        ELSE IF    "${status}" == "LANCE OFERTADO"
+    IF    "${status}" == "LANCE OFERTADO"
             ${body}    Update Value To Json    ${body}    $.status_type_gestao_lances_desc    ${status}
             ${body}    Update Value To Json    ${body}    $.data_coleta_feedback    ${dateTime} 
             ${body}    Add Object To Json    ${body}    $.data_assembleia   ${data_assembleia}
-
-        ELSE IF    "${status}" == "LANCE CONTEMPLADO"
+    ELSE
             ${body}    Update Value To Json    ${body}    $.status_type_gestao_lances_desc    ${status}
             ${body}    Update Value To Json    ${body}    $.data_coleta_feedback    ${dateTime}     
-
-        ELSE IF    "${status}" == "LANCE NAO CONTEMPLADO"
-            ${body}    Update Value To Json    ${body}    $.status_type_gestao_lances_desc    ${status}
-            ${body}    Update Value To Json    ${body}    $.data_coleta_feedback    ${dateTime}     
-
-        ELSE IF    "${status}" == "AGUARDANDO PAGAMENTO LANCE"
-            ${body}    Update Value To Json    ${body}    $.status_type_gestao_lances_desc    ${status}
-            ${body}    Update Value To Json    ${body}    $.data_coleta_feedback    ${dateTime}     
-
-        ELSE IF    "${status}" == "ERRO NO PAGAMENTO"
-            ${body}    Update Value To Json    ${body}    $.status_type_gestao_lances_desc    ${status}
-            ${body}    Update Value To Json    ${body}    $.data_coleta_feedback    ${dateTime}     
-
-        ELSE IF    "${status}" == "PAGAMENTO FINALIZADO"
-            ${body}    Update Value To Json    ${body}    $.status_type_gestao_lances_desc    ${status}
-            ${body}    Update Value To Json    ${body}    $.data_coleta_feedback    ${dateTime}
-
     END
 
     [Return]    ${body}

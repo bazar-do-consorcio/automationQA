@@ -11,6 +11,7 @@ ${btn_pesquisar}         xpath://span[text()='Confirmar']/..
 ${options_attributes}    id:search_key
 ${option_OwnersName}     xpath://option[@value='owners::name']
 ${option_OwnersCPF}      xpath://option[@value='owners::cpf']
+${option_OwnersEmail}      xpath://option[@value='owners::email']
 
 *** Keywords ***
 

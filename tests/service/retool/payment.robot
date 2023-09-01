@@ -31,7 +31,6 @@ Cenário 3: Patch Payment
     ${get}=    Post request with x-api-key
     ...         type_name=ByPostPayment
     
-
     ${resp}=    Patch request with x-api-key
     ...         type_name=ByPatchPayment
     ...         id=${get.json()}[boleto_id]

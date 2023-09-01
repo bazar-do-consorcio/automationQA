@@ -40,6 +40,11 @@ Cenário 2: Post Plan Of Contemplation Contemplação
     ...         type_name=ByQuotas
     
     Locate object    array=${quotas}    field=cota_id    value=${resp.json()}[cota_id]
+
+    ${ByQuotasWithoutInstallment}=    Get request with x-api-key
+    ...         type_name=ByQuotasWithoutInstallment
+    
+    Locate object    array=${ByQuotasWithoutInstallment}    field=cota_id    value=${resp.json()}[cota_id]
     
     ${assetChange}=      Get request with x-api-key
     ...         type_name=ByGetAssetChanges
